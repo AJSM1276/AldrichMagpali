@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolarPrep | QuestBridge Mentor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>The Nexus | Aldrich — Creative Hub & Mentorship</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Add Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ===== CSS Variables ===== */
+        /* ===== EXACT ORIGINAL HEADER CSS ===== */
         :root {
-            /* Colors */
             --primary: #5a8da6;
             --primary-light: #7ba9c0;
             --primary-very-light: #e8f0f7;
@@ -22,50 +20,30 @@
             --text-light: #666666;
             --white: #ffffff;
             --off-white: #faf9f7;
-            --off-white-very-light: #fcfcfc;
             --border: #e0e0e0;
             --success: #4caf50;
             --error: #f44336;
-            
-            /* Spacing */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
             --space-lg: 2.5rem;
             --space-xl: 4rem;
-            
-            /* Typography */
             --font-xs: 0.875rem;
             --font-sm: 1rem;
             --font-md: 1.125rem;
             --font-lg: 1.5rem;
             --font-xl: 2rem;
-            --font-xxl: 2.5rem;
-            
-            /* Borders */
             --radius: 8px;
             --radius-lg: 12px;
-            
-            /* Shadows */
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
-            --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.06);
-            
-            /* Transitions */
-            --transition: 0.3s ease;
-            --transition-slow: 0.5s ease;
+            --transition: 0.2s ease;
         }
 
-        /* ===== Reset & Base Styles ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
         }
 
         body {
@@ -84,41 +62,7 @@
             padding: 0 var(--space-md);
         }
 
-        /* ===== Typography ===== */
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            line-height: 1.3;
-            color: var(--primary);
-            margin-bottom: var(--space-sm);
-        }
-
-        h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-        }
-
-        h2 {
-            font-size: var(--font-xl);
-        }
-
-        h3 {
-            font-size: var(--font-lg);
-        }
-
-        p {
-            margin-bottom: var(--space-sm);
-        }
-
-        a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color var(--transition);
-        }
-
-        a:hover {
-            color: var(--primary-light);
-        }
-
-        /* ===== Header ===== */
+        /* ===== EXACT ORIGINAL HEADER STYLES ===== */
         .header {
             position: fixed;
             top: 0;
@@ -144,38 +88,17 @@
             font-weight: 600;
             color: var(--primary);
             font-size: var(--font-md);
+            text-decoration: none;
         }
 
         .logo-icon {
             font-size: 1.5rem;
         }
 
-        .logo-icon img {
-            width: 30px;  /* Adjust to your preferred size */
-            height: 30px;
-            display: inline-block;
-            vertical-align: middle; /* Aligns with text */
-        }
-
         .logo-text {
-            /* display: none; */
+            display: inline;
         }
 
-        @media (min-width: 640px) {
-            .logo-text {
-                display: inline;
-            }
-        }
-
-        @media (max-width: 350px) {
-            .logo-text {
-                display: none;
-            }
-            .logo-icon {
-                display: none;
-            }
-        }
-        /* ===== Menu Toggle ===== */
         .menu-toggle {
             display: flex;
             flex-direction: column;
@@ -187,7 +110,7 @@
             cursor: pointer;
             padding: 0;
             z-index: 1001;
-            transition: transform var(--transition);
+            transition: transform 0.2s ease;
         }
 
         .menu-toggle:hover {
@@ -200,7 +123,7 @@
             height: 3px;
             background-color: var(--primary);
             border-radius: 2px;
-            transition: all var(--transition-slow);
+            transition: all 0.2s ease;
             transform-origin: center;
         }
 
@@ -217,259 +140,18 @@
             transform: translateY(-10px) rotate(-45deg);
         }
 
-                /* ===== Social Links ===== */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-md);
-            margin: var(--space-lg) 0;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            background-color: var(--primary-very-light);
-            border-radius: 50%;
-            color: var(--primary);
-            font-size: 1.25rem;
-            transition: all var(--transition);
-            border: 1px solid var(--border);
-            text-decoration: none;
-        }
-
-        .social-link i {
-            font-size: 1.1rem;
-        }
-
-        .social-link:hover {
-            background-color: var(--primary);
-            color: var(--white);
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: var(--shadow);
-        }
-
-        /* Optional: Platform-specific hover colors */
-        .social-link:hover:nth-child(1) { background-color: #0077b5; border-color: #0077b5; } /* LinkedIn */
-        .social-link:hover:nth-child(2) { background-color: #e4405f; border-color: #e4405f; } /* Instagram */
-        /* .social-link:hover:nth-child(3) { background-color: #1da1f2; border-color: #1da1f2; } Twitter */
-        .social-link:hover:nth-child(3) { background-color: #ff0000; border-color: #ff0000; } /* YouTube */
-        .social-link:hover:nth-child(4) { background-color: #333; border-color: #333; } /* GitHub */
-        .social-link:hover:nth-child(6) { background-color: #000000; border-color: #000000; } /* TikTok */
-
-        /* Mobile responsive */
-        @media (max-width: 767px) {
-            .social-links {
-                gap: var(--space-sm);
-                margin: var(--space-md) 0;
-            }
-            
-            .social-link {
-                width: 40px;
-                height: 40px;
-            }
-            
-            .social-link i {
-                font-size: 1rem;
-            }
-        }
-
-        /* ===== Navigation ===== */
         .nav {
             display: none;
             opacity: 0;
             transform: translateY(-20px);
-            transition: all var(--transition-slow);
+            transition: all 0.2s ease;
         }
 
         .nav.active {
             display: block;
             opacity: 1;
             transform: translateY(0);
-            animation: slideDown 0.4s ease-out;
-        }
-
-        /* ===== Dropdown Navigation ===== */
-        .nav-item-has-children {
-            position: relative;
-        }
-
-        .dropdown-icon {
-            display: inline-block;
-            margin-left: 4px;
-            font-size: 0.8em;
-            transition: transform var(--transition);
-        }
-
-        /* Desktop Dropdown Styles */
-        /* Desktop Dropdown Styles - ONLY for 1000px and above */
-/* Desktop Dropdown Styles - ONLY for 1000px and above */
-@media (min-width: 1000px) {
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-10px) perspective(1000px) rotateX(-5deg);
-        transform-origin: top center;
-        min-width: 200px;
-        background-color: var(--white);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-        padding: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.25s ease, 
-                    transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                    visibility 0s linear 0.35s;
-        z-index: 1000;
-        list-style: none;
-        overflow: hidden;
-        will-change: transform, opacity;
-        backface-visibility: hidden;
-        -webkit-font-smoothing: antialiased;
-    }
-    
-    .nav-item-has-children:hover .dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) translateY(0) perspective(1000px) rotateX(0);
-        transition-delay: 0s;
-    }
-    
-    .nav-item-has-children:hover .dropdown-icon {
-        transform: rotate(180deg);
-    }
-    
-    .dropdown-link {
-        display: block;
-        padding: 14px 24px;
-        color: var(--text);
-        font-size: var(--font-sm);
-        font-weight: 500;
-        transition: all 0.2s ease;
-        white-space: nowrap;
-        text-align: left;
-        border-left: 3px solid transparent;
-        transform: translateZ(0);
-        backface-visibility: hidden;
-    }
-    
-    .dropdown-link:hover {
-        background-color: var(--primary-very-light);
-        color: var(--primary);
-        border-left-color: var(--primary);
-    }
-    
-    /* Animate dropdown items */
-    .dropdown-menu li {
-        margin: 0;
-        opacity: 0;
-        transform: translateY(-5px);
-        transition: all 0.2s ease;
-    }
-    
-    .nav-item-has-children:hover .dropdown-menu li {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: calc(var(--index, 0) * 0.05s + 0.1s);
-    }
-}
-
-/* Mobile & Tablet Dropdown Styles */
-@media (max-width: 999px) {
-    .dropdown-menu {
-        max-height: 0;
-        overflow: hidden;
-        background: rgba(248, 249, 250, 0.9);
-        border-radius: 8px;
-        margin: 5px 0 0 15px;
-        transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        list-style: none;
-        padding: 0;
-        will-change: max-height;
-    }
-    
-    .nav-item-has-children.active .dropdown-menu {
-        max-height: 200px;
-    }
-    
-    .dropdown-link {
-        display: block;
-        padding: 12px 20px;
-        color: var(--text-light);
-        font-size: var(--font-sm);
-        transition: all 0.2s ease;
-        border-radius: 6px;
-        margin: 3px 8px;
-        opacity: 0;
-        transform: translateX(-15px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    
-    .nav-item-has-children.active .dropdown-link {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    
-    /* Stagger animations */
-    .nav-item-has-children.active .dropdown-link:nth-child(1) {
-        transition-delay: 0.08s;
-    }
-    
-    .nav-item-has-children.active .dropdown-link:nth-child(2) {
-        transition-delay: 0.16s;
-    }
-    
-    .dropdown-link:hover {
-        color: var(--primary);
-        background-color: var(--primary-very-light);
-        transform: translateX(4px);
-    }
-}
-
-        /* Mobile & Tablet Dropdown Styles - for everything below 1000px */
-        @media (max-width: 999px) {
-            .dropdown-menu {
-                max-height: 0;
-                overflow: hidden;
-                background-color: rgba(0, 0, 0, 0.02);
-                border-radius: var(--radius);
-                margin: 5px 0 0 0;
-                transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                            padding 0.3s ease,
-                            margin 0.3s ease;
-                list-style: none;
-                padding-left: 20px;
-            }
-            
-            .nav-item-has-children.active .dropdown-menu {
-                max-height: 300px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                margin-top: 8px;
-                margin-bottom: 5px;
-            }
-            
-            .dropdown-link {
-                display: block;
-                padding: 10px 15px;
-                color: var(--text-light);
-                font-size: var(--font-sm);
-                transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                border-radius: 4px;
-                margin: 2px 0;
-            }
-            
-            .dropdown-link:hover {
-                color: var(--primary);
-                background-color: var(--primary-very-light);
-                padding-left: 20px;
-                transform: translateX(5px);
-            }
+            animation: slideDown 0.25s ease-out;
         }
 
         @keyframes slideDown {
@@ -483,45 +165,7 @@
             }
         }
 
-        @media (min-width: 768px) and (max-width: 999px) {
-            .nav.active {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: var(--white);
-                padding: var(--space-md);
-                box-shadow: var(--shadow-lg);
-                border-top: 1px solid var(--border);
-                z-index: 999;
-            }
-            
-            .nav-list {
-                display: flex;
-                flex-direction: column;
-                gap: var(--space-md);
-                list-style: none; /* ← This fixes the bullet issue */
-            }
-            
-            .nav-link {
-                display: block;
-                padding: var(--space-sm);
-                color: var(--text);
-                font-weight: 500;
-                font-size: var(--font-md);
-                border-radius: var(--radius);
-                transition: all var(--transition);
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            
-            .nav.active .nav-link {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @media (min-width: 1000px) {
+        @media (min-width: 768px) {
             .menu-toggle {
                 display: none;
             }
@@ -544,6 +188,8 @@
                 font-size: var(--font-sm);
                 padding: var(--space-xs) 0;
                 position: relative;
+                text-decoration: none;
+                transition: color 0.2s ease;
             }
             
             .nav-link::after {
@@ -554,15 +200,18 @@
                 width: 0;
                 height: 2px;
                 background-color: var(--primary);
-                transition: width var(--transition);
+                transition: width 0.2s ease;
             }
             
             .nav-link:hover::after {
                 width: 100%;
             }
+            
+            .nav-link:hover {
+                color: var(--primary);
+            }
         }
 
-        /* Mobile Navigation */
         @media (max-width: 767px) {
             .nav.active {
                 position: fixed;
@@ -590,9 +239,10 @@
                 font-weight: 500;
                 font-size: var(--font-md);
                 border-radius: var(--radius);
-                transition: all var(--transition);
+                transition: all 0.15s ease;
                 opacity: 0;
                 transform: translateX(-20px);
+                text-decoration: none;
             }
             
             .nav.active .nav-link {
@@ -600,29 +250,9 @@
                 transform: translateX(0);
             }
             
-            .nav.active .nav-link:nth-child(1) {
-                transition-delay: 0.1s;
-            }
-            
-            .nav.active .nav-link:nth-child(2) {
-                transition-delay: 0.15s;
-            }
-            
-            .nav.active .nav-link:nth-child(3) {
-                transition-delay: 0.2s;
-            }
-            
-            .nav.active .nav-link:nth-child(4) {
-                transition-delay: 0.25s;
-            }
-            
-            .nav.active .nav-link:nth-child(5) {
-                transition-delay: 0.3s;
-            }
-            
-            .nav.active .nav-link:nth-child(6) {
-                transition-delay: 0.35s;
-            }
+            .nav.active .nav-link:nth-child(1) { transition-delay: 0.05s; }
+            .nav.active .nav-link:nth-child(2) { transition-delay: 0.1s; }
+            .nav.active .nav-link:nth-child(3) { transition-delay: 0.15s; }
             
             .nav-link:hover {
                 background-color: var(--secondary);
@@ -630,3413 +260,801 @@
             }
         }
 
-        /* ===== Hero Section ===== */
+        /* ===== HERO WITH PERSONAL FEATURE ===== */
         .hero {
-            background: linear-gradient(135deg, var(--primary-very-light) 0%, var(--secondary) 100%);
-            padding: var(--space-xl) 0;
-            position: relative;
-            overflow: hidden;
-            min-height: 90vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-very-light) 0%, var(--secondary) 100%);
+            overflow: hidden;
         }
 
-        .hero::before {
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .hero-bg-pattern::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 80%, rgba(90, 141, 166, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(248, 245, 240, 0.1) 0%, transparent 50%);
-            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, var(--primary) 0px, var(--primary) 1px, transparent 1px, transparent 30px);
+            background-size: 40px 40px;
+        }
+
+        .hero-orb {
+            position: absolute;
+            top: 20%;
+            right: 5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(90,141,166,0.1), transparent);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-orb-2 {
+            bottom: 10%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(90,141,166,0.08), transparent);
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
         }
 
         .hero-grid {
-            position: relative;
-            z-index: 2;
             display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-xl);
-            margin-bottom: var(--space-lg);
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 5;
+            width: 100%;
         }
 
-        @media (min-width: 992px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-            }
-        }
-
-        /* Hero Content */
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: var(--space-xs);
-            background-color: var(--white);
-            padding: var(--space-xs) var(--space-sm);
-            border-radius: 50px;
-            box-shadow: var(--shadow);
-            margin-bottom: var(--space-lg);
-            border: 1px solid var(--border);
-            animation: fadeInUp 0.6s ease-out 0.2s both;
-        }
-
-        .badge-icon {
-            font-size: 1.25rem;
-        }
-
-        .badge-text {
-            font-size: var(--font-sm);
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--primary);
+            margin-bottom: 1.5rem;
+            width: fit-content;
         }
 
         .hero-title {
-            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
             line-height: 1.2;
-            margin-bottom: var(--space-md);
+            letter-spacing: -0.02em;
             color: var(--text);
-            animation: fadeInUp 0.6s ease-out 0.3s both;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, var(--primary), #2c5f6b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
         .hero-subtitle {
-            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-size: 1.1rem;
             color: var(--text-light);
-            margin-bottom: var(--space-lg);
-            line-height: 1.5;
-            animation: fadeInUp 0.6s ease-out 0.4s both;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
-        .hero-features {
+        .hero-stats {
             display: flex;
-            flex-direction: column;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-lg);
+            gap: 2rem;
+            margin: 2rem 0;
         }
 
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            animation: fadeInUp 0.6s ease-out both;
+        .stat-item {
+            text-align: left;
         }
 
-        .feature:nth-child(1) { animation-delay: 0.5s; }
-        .feature:nth-child(2) { animation-delay: 0.6s; }
-        .feature:nth-child(3) { animation-delay: 0.7s; }
-
-        .feature-icon {
-            font-size: 1.25rem;
-            background-color: var(--white);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow);
-            flex-shrink: 0;
-            transition: all var(--transition);
-        }
-
-        /* .feature:hover .feature-icon {
-            transform: rotate(10deg) scale(1.1);
-            background-color: var(--primary);
-            color: var(--white);
-        } */
-
-        .feature-text {
-            font-size: var(--font-sm);
-            color: var(--text);
-            transition: color var(--transition);
-        }
-
-        /* .feature:hover .feature-text {
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
             color: var(--primary);
-        } */
+            line-height: 1;
+        }
 
-        .hero-actions {
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        .btn-group {
             display: flex;
+            gap: 1rem;
             flex-wrap: wrap;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
+            margin-top: 1rem;
         }
 
         .btn {
-            display: inline-block;
-            padding: var(--space-sm) var(--space-lg);
-            border-radius: var(--radius);
+            padding: 12px 28px;
+            border-radius: 100px;
             font-weight: 600;
-            font-size: var(--font-sm);
-            text-decoration: none;
-            transition: all var(--transition);
+            transition: all 0.2s ease;
             cursor: pointer;
-            border: 2px solid transparent;
-            animation: fadeInUp 0.6s ease-out 0.8s backwards;
+            border: none;
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
+            background: var(--primary);
+            color: white;
             box-shadow: 0 4px 12px rgba(90, 141, 166, 0.2);
         }
 
         .btn-primary:hover {
-            background-color: var(--primary-light);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(90, 141, 166, 0.3);
-            color: var(--white);
+            background: var(--primary-light);
         }
 
         .btn-outline {
-            background-color: transparent;
+            background: transparent;
+            border: 2px solid var(--primary);
             color: var(--primary);
-            border-color: var(--primary);
         }
 
         .btn-outline:hover {
-            background-color: var(--primary);
-            color: var(--white);
-            transform: translateY(-2px);
-        }
-
-        .hero-note {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: var(--space-md);
-            border-radius: var(--radius);
-            border-left: 4px solid var(--primary);
-            font-size: var(--font-sm);
-            max-width: 500px;
-            margin-top: var(--space-lg);
-            animation: fadeInUp 0.6s ease-out 0.9s both;
-        }
-
-        .hero-note p {
-            margin-bottom: 0;
-        }
-
-        /* Hero Visual */
-        .hero-visual {
-            position: relative;
-            min-height: 300px;
-            display: none;
-        }
-
-        @media (min-width: 992px) {
-            .hero-visual {
-                display: block;
-            }
-        }
-
-        .visual-elements {
-            position: relative;
-            height: 300px;
-        }
-
-        /* Paper Animation Styles */
-        .paper {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 180px;
-            height: 200px;
-            background: linear-gradient(to bottom, #fff 0%, #f9f9f9 100%);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: var(--space-md);
-            box-shadow: var(--shadow-lg);
-            transform: rotate(-5deg);
-            transition: all var(--transition);
-            animation: fadeInRight 0.8s ease-out 0.3s both, paperFloat 6s ease-in-out infinite 1s;
-        }
-
-        .paper:hover {
-            transform: rotate(-2deg) scale(1.05);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-            z-index: 10;
-        }
-
-        /* Paper floating animation */
-        @keyframes paperFloat {
-            0%, 100% { 
-                transform: rotate(-5deg) translateY(0); 
-            }
-            50% { 
-                transform: rotate(5deg) translateY(-10px); 
-            }
-        }
-
-        @keyframes paperFloatnonrotate {
-            0%, 100% { 
-                transform: rotate(5deg) translateY(0); 
-            }
-            50% { 
-                transform: rotate(-5deg) translateY(-10px); 
-            }
-        }
-
-        /* Paper line animations */
-        .paper-lines {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: var(--space-sm);
-        }
-
-        .paper .line {
-            height: 1px;
-            background-color: var(--border);
-            transition: all var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .paper:hover .line {
-            background-color: var(--primary-light);
-            transform: scaleX(1.1);
-        }
-
-        .paper .line:nth-child(1) { 
-            width: 100%; 
-            transition-delay: 0.1s;
-        }
-        .paper .line:nth-child(2) { 
-            width: 95%; 
-            transition-delay: 0.2s;
-        }
-        .paper .line:nth-child(3) { 
-            width: 100%; 
-            transition-delay: 0.3s;
-        }
-        .paper .line:nth-child(4) { 
-            width: 90%; 
-            transition-delay: 0.4s;
-        }
-
-        /* Paper text animation */
-        .paper-text {
-            font-style: italic;
-            color: var(--text-light);
-            font-size: var(--font-sm);
-            padding: var(--space-xs);
-            background-color: var(--primary-very-light);
-            border-radius: 4px;
-            transition: all var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .paper:hover .paper-text {
-            color: var(--primary);
-            background-color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        /* Paper crumple effect on hover */
-        .paper::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.8) 50%, transparent 70%);
-            opacity: 0;
-            transition: opacity var(--transition);
-            pointer-events: none;
-        }
-
-        .paper:hover::before {
-            opacity: 0.3;
-        }
-
-        /* Pencil */
-        .pencil {
-            position: absolute;
-            bottom: 60px;
-            right: 60px;
-            width: 120px;
-            height: 12px;
-            transform: rotate(30deg);
-            transition: transform var(--transition);
-            animation: fadeInRight 0.8s ease-out 0.5s both;
-        }
-
-        .pencil:hover {
-            transform: rotate(28deg) scale(1.1);
-        }
-
-        .pencil-tip {
-            position: absolute;
-            left: -8px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-            border-left: 8px solid #666;
-        }
-
-        .pencil-body {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, #ff9e6d 0%, #ff9e6d 10%, #ffcc00 10%, #ffcc00 90%, #ff6b6b 90%, #ff6b6b 100%);
-            border-radius: 2px;
-            box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .pencil-eraser {
-            position: absolute;
-            right: -4px;
-            top: 2px;
-            width: 8px;
-            height: 8px;
-            background-color: #ff6b6b;
-            border-radius: 0 2px 2px 0;
-        }
-
-        /* Graduation Cap Emoji (Replaces Book Stack) */
-        .graduation-cap {
-            position: absolute;
-            bottom: 40px;
-            left: 100px;
-            width: 80px;
-            height: 80px;
-            font-size: 4.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform var(--transition);
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
-            animation: fadeInRight 0.8s ease-out 0.3s both, float 7s ease-in-out infinite 1s;
-        }
-
-        .graduation-cap:hover {
-            transform: translateY(-5px) scale(1.1);
-        }
-
-        @keyframes float {
-            0%, 100% { 
-                transform: rotate(5deg) translateY(15px); 
-            }
-            50% { 
-                transform: rotate(-5deg) translateY(-15px); 
-            }
-        }
-
-        /* Quote */
-        .quote {
-            position: absolute;
-            top: 60px;
-            right: 30px;
-            width: 220px;
-            background-color: var(--white);
-            padding: var(--space-md);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--border);
-            transform: rotate(3deg);
-            transition: transform var(--transition);
-            animation: fadeInRight 0.8s ease-out 0.3s both, paperFloatnonrotate 15s ease-in-out infinite 1s;
-        }
-
-        .quote:hover {
-            transform: rotate(0deg) scale(1.05);
-        }
-
-        .quote-mark {
-            font-size: 3rem;
-            color: var(--primary-light);
-            font-family: Georgia, serif;
-            line-height: 1;
-            margin-bottom: var(--space-xs);
-        }
-
-        .quote-content p {
-            font-style: italic;
-            color: var(--text);
-            margin-bottom: var(--space-xs);
-            font-weight: 500;
-            line-height: 1.4;
-        }
-
-        .quote-author {
-            font-size: var(--font-xs);
-            color: var(--text-light);
-            text-align: right;
-            font-style: italic;
-        }
-
-        /* Hero Stats */
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-xl);
-            padding-top: var(--space-lg);
-            border-top: 1px solid rgba(90, 141, 166, 0.1);
-            position: relative;
-            z-index: 2;
-            flex-wrap: wrap;
-            margin-top: var(--space-xl);
-        }
-
-        .stat {
-            text-align: center;
-            min-width: 120px;
-            animation: fadeInUp 0.6s ease-out both;
-            transition: transform var(--transition);
-        }
-
-        .stat:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat:nth-child(1) { animation-delay: 1s; }
-        .stat:nth-child(2) { animation-delay: 1.1s; }
-        .stat:nth-child(3) { animation-delay: 1.2s; }
-
-        .stat-number {
-            font-size: var(--font-xl);
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: var(--space-xs);
-            transition: color var(--transition);
-        }
-
-        .stat:hover .stat-number {
-            color: var(--primary-light);
-        }
-
-        .stat-label {
-            font-size: var(--font-sm);
-            color: var(--text-light);
-        }
-
-        /* Fixed Scroll Hint - Only shows when there's space */
-        .scroll-hint {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: var(--space-xs);
-            z-index: 2;
-            opacity: 0.7;
-            animation: bounce 2s infinite ease-in-out 1.5s;
-            display: none; /* Hidden by default */
-        }
-
-        @media (min-height: 700px) {
-            .scroll-hint {
-                display: none;
-            }
-        }
-
-        .scroll-hint span {
-            font-size: var(--font-xs);
-            color: var(--text-light);
-            letter-spacing: 1px;
-        }
-
-        .scroll-hint .arrow {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-10px); }
-        }
-
-        /* Animation Keyframes */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* ===== Section Common Styles ===== */
-        .section {
-            padding: var(--space-xl) 0;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease-out;
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--space-lg);
-        }
-
-        .section-subtitle {
-            font-size: var(--font-md);
-            color: var(--text-light);
-            margin-bottom: var(--space-lg);
-        }
-
-        /* ===== About Section ===== */
-        .about {
-            background-color: var(--white);
-        }
-
-        .about-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .profile {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-lg);
-        }
-
-        @media (min-width: 768px) {
-            .profile {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-        }
-
-        .profile-image {
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        @media (min-width: 768px) {
-            .profile-image {
-                width: 40%;
-            }
-        }
-
-        .image-placeholder {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: var(--primary-very-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--space-sm);
-            border: 4px solid var(--secondary);
-            box-shadow: var(--shadow-lg);
-            transition: transform var(--transition);
-        }
-
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto var(--space-sm);
-            border: 4px solid var(--secondary);
-            box-shadow: var(--shadow-lg);
-            transition: transform var(--transition);
-            display: block;
-        }
-
-.profile-image:hover .profile-photo {
-    transform: scale(1.05);
-}
-
-        .profile-image:hover .image-placeholder {
-            transform: scale(1.05);
-        }
-
-        .initials {
-            font-size: 3.5rem;
-            font-weight: 600;
-            color: var(--primary);
-            transition: color var(--transition);
-        }
-
-        .profile-image:hover .initials {
-            color: var(--primary-light);
-        }
-
-        .profile-caption {
-            font-size: var(--font-sm);
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        .profile-text {
-            flex: 1;
-        }
-
-        @media (min-width: 768px) {
-            .profile-text {
-                width: 60%;
-            }
-        }
-
-        .intro {
-            font-size: var(--font-md);
-            margin-bottom: var(--space-md);
-        }
-
-        .disclaimer-box {
-            background-color: var(--primary-very-light);
-            border-left: 4px solid var(--primary);
-            padding: var(--space-md);
-            margin: var(--space-md) 0;
-            border-radius: 0 var(--radius) var(--radius) 0;
-            transition: transform var(--transition);
-        }
-
-        .disclaimer-box:hover {
-            transform: translateX(5px);
-        }
-
-        /* Free Products Section */
-        .free-products {
-        padding: 4rem 2rem;
-        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        margin-top: 0;
-        }
-
-        .section-header {
-        text-align: center;
-        margin-bottom: 3rem;
-        }
-
-        .section-header h2 {
-        font-size: 2.5rem;
-        color: #1e293b;
-        margin-bottom: 0.5rem;
-        }
-
-        .section-header .subtitle {
-        color: #64748b;
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto;
-        }
-
-        /* Products Grid */
-        .products-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto 3rem;
-        }
-
-        .product-card {
-        background: white;
-        border-radius: 12px;
-        padding: 2rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        border: 1px solid #e2e8f0;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative;
-        }
-
-        .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-badge {
-        position: absolute;
-        top: -10px;
-        right: 20px;
-        background: #10b981;
-        color: white;
-        padding: 0.25rem 1rem;
-        border-radius: 20px;
-        font-weight: 600;
-        font-size: 0.875rem;
-        }
-
-        .product-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        }
-
-        .product-card h3 {
-        color: #1e293b;
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-        }
-
-        .product-card > p {
-        color: #64748b;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-        }
-
-        .product-features {
-        margin: 1.5rem 0;
-        padding-left: 1.5rem;
-        }
-
-        .product-features li {
-        color: #475569;
-        margin-bottom: 0.5rem;
-        position: relative;
-        list-style: none;
-        }
-
-        .product-features li:before {
-        content: "✓";
-        color: #10b981;
-        position: absolute;
-        left: -1.5rem;
-        }
-
-        .download-btn {
-        display: inline-block;
-        background: #3b82f6;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background 0.3s ease;
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
-        }
-
-        .download-btn:hover {
-        background: #2563eb;
-        }
-
-        .cta-footer {
-        text-align: center;
-        padding-top: 2rem;
-        border-top: 1px solid #e2e8f0;
-        max-width: 600px;
-        margin: 0 auto;
-        }
-
-        .cta-footer a {
-        color: #3b82f6;
-        text-decoration: none;
-        font-weight: 600;
-        }
-
-        .cta-footer a:hover {
-        text-decoration: underline;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 1000px) {
-        .free-products {
-            padding: 3rem 1rem;
-        }
-        
-        .section-header h2 {
-            font-size: 2rem;
-        }
-        
-        .products-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .product-card {
-            padding: 1.5rem;
-        }
-        }
-
-        /* ===== Services Section ===== */
-        .services {
-            background-color: var(--secondary);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-lg);
-            margin-bottom: var(--space-lg);
-        }
-
-        @media (min-width: 1000px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .service-card {
-            background-color: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-card);
-            transition: transform var(--transition), box-shadow var(--transition);
-            border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-
-        .service-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .service-card:nth-child(1) { transition-delay: 0.1s; }
-        .service-card:nth-child(2) { transition-delay: 0.2s; }
-        .service-card:nth-child(3) { transition-delay: 0.3s; }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-header {
-            padding: var(--space-lg) var(--space-lg) var(--space-md);
-            background-color: var(--primary-very-light);
-            border-bottom: 1px solid var(--border);
-            transition: background-color var(--transition);
-        }
-
-        .service-card:hover .service-header {
-            background-color: var(--primary-light);
-        }
-
-        .service-card:hover .service-header h3 {
-            color: var(--white);
-        }
-
-        .service-header h3 {
-            margin-bottom: 0;
-            transition: color var(--transition);
-        }
-
-        .service-body {
-            padding: var(--space-lg);
-            flex: 1;
-        }
-
-        .service-features {
-            list-style: none;
-            margin-top: var(--space-md);
-        }
-
-        .service-features li {
-            margin-bottom: var(--space-sm);
-            padding-left: 1.5rem;
-            position: relative;
-            transition: transform var(--transition);
-        }
-
-        .service-features li:hover {
-            transform: translateX(5px);
-            color: var(--primary);
-        }
-
-        .service-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .service-footer {
-            padding: 0 var(--space-lg) var(--space-lg);
-        }
-
-        .service-btn {
-            display: block;
-            text-align: center;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: var(--space-md);
-            border-radius: var(--radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: background-color var(--transition), transform var(--transition);
-        }
-
-        .service-btn:hover {
-            background-color: var(--primary-light);
-            color: var(--white);
-            transform: translateY(-2px);
-        }
-
-        .services-note {
-            background-color: var(--white);
-            padding: var(--space-md);
-            border-radius: var(--radius);
-            text-align: center;
-            border-left: 4px solid var(--primary);
-            font-size: var(--font-sm);
-            color: var(--text-light);
-            transition: transform var(--transition);
-        }
-
-        .services-note:hover {
-            transform: translateY(-3px);
-        }
-
-        .pricing-block {
-    text-align: center;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background: #f8fafc;
-    border-radius: 8px;
-}
-
-.original-price {
-    text-decoration: line-through;
-    color: #94a3b8;
-    font-size: 0.875rem;
-}
-
-.current-price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1e293b;
-    line-height: 1;
-}
-
-.price-frequency {
-    font-size: 0.875rem;
-    color: #64748b;
-    margin-top: 0.25rem;
-}
-
-        /* ===== Essays Section ===== */
-        .essays {
-            background-color: var(--white);
-        }
-
-        .essays-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto var(--space-lg);
-            font-size: var(--font-md);
-            color: var(--text-light);
-        }
-
-        .essays-accordion {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .accordion-item {
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            margin-bottom: var(--space-sm);
-            overflow: hidden;
-            background-color: var(--off-white);
-            transition: all var(--transition);
-        }
-
-        .accordion-toggle {
-            width: 100%;
-            background-color: var(--white);
-            border: none;
-            padding: var(--space-md) var(--space-lg);
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            font-family: 'Comfortaa', sans-serif;
-            font-size: var(--font-md);
-            transition: background-color var(--transition);
-        }
-
-        .accordion-toggle:hover {
-            background-color: var(--secondary);
-        }
-
-        .accordion-toggle h3 {
-            margin-bottom: 0;
-            flex: 1;
-        }
-
-        .accordion-icon {
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--primary);
-            transition: transform var(--transition-slow);
-        }
-
-        .accordion-item.active .accordion-icon {
-            transform: rotate(45deg);
-        }
-
-        .accordion-content {
-            padding: 0 var(--space-lg);
-            max-height: 0;
-            overflow: hidden;
-            transition: all var(--transition-slow);
-        }
-
-        .accordion-item.active .accordion-content {
-            padding: var(--space-md) var(--space-lg) var(--space-lg);
-            max-height: 1000px;
-        }
-
-                /* ===== Purchase Essays Section ===== */
-        .purchase-essays {
-            background-color: var(--secondary);
-            padding: var(--space-xl) 0;
-        }
-
-        .essay-samples {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .essay-sample {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            margin-bottom: var(--space-lg);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
-            transition: transform var(--transition), box-shadow var(--transition);
-        }
-
-        .essay-sample:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .essay-sample-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: var(--space-md);
-        }
-
-        .essay-sample-header h3 {
-            color: var(--primary);
-            margin-bottom: var(--space-xs);
-        }
-
-        .essay-tags {
-            display: flex;
-            gap: var(--space-xs);
-            flex-wrap: wrap;
-            margin-top: var(--space-sm);
-        }
-
-        .essay-tag {
-            background: var(--primary-very-light);
-            color: var(--primary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: var(--font-xs);
-            font-weight: 500;
-        }
-
-        .essay-sample-content {
-            flex: 1;
-        }
-
-        .essay-excerpt {
-            background: var(--off-white-very-light);
-            padding: var(--space-md);
-            border-radius: var(--radius);
-            border-left: 3px solid var(--primary);
-            font-style: italic;
-            line-height: 1.6;
-            margin: var(--space-md) 0;
-            position: relative;
-        }
-
-        .essay-excerpt::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-size: 2.5rem;
-            color: var(--primary-light);
-            font-family: Georgia, serif;
-        }
-
-        .essay-sample-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: var(--space-md);
-            border-top: 1px solid var(--border);
-        }
-
-        .essay-stats {
-            display: flex;
-            gap: var(--space-lg);
-            color: var(--text-light);
-            font-size: var(--font-sm);
-        }
-
-        .essay-stat {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .purchase-btn {
             background: var(--primary);
-            color: var(--white);
-            border: none;
-            padding: var(--space-sm) var(--space-lg);
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: var(--font-sm);
-            cursor: pointer;
-            transition: all var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .purchase-btn:hover {
-            background: var(--primary-light);
+            color: white;
             transform: translateY(-2px);
         }
 
-        .price {
-            font-size: var(--font-lg);
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            color: var(--text-light);
-            font-size: var(--font-sm);
-            margin-right: 8px;
-        }
-
-        .discount-badge {
-            background: #ff6b6b;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: var(--font-xs);
-            font-weight: 600;
-            position: absolute;
-            top: -10px;
-            right: -10px;
-        }
-
-        .purchase-note {
-            background: var(--primary-very-light);
-            padding: var(--space-md);
-            border-radius: var(--radius);
+        .personal-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-radius: 28px;
+            padding: 1.5rem;
             text-align: center;
-            margin-top: var(--space-xl);
-            border-left: 4px solid var(--primary);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(90,141,166,0.2);
+            transition: transform 0.2s ease;
         }
 
-        .purchase-note p {
-            margin-bottom: 0;
-            font-size: var(--font-sm);
-            color: var(--text);
-        }
-
-        /* Hide essay-stats on mobile */
-        @media screen and (max-width: 1000px) {
-        .essay-stats {
-            display: none !important;
-        }
-        
-        /* If you need to adjust layout after removing stats */
-        .purchase-section {
-            grid-template-columns: 1fr !important;
-        }
-        }
-
-        /* Modal for essay preview */
-        .essay-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: var(--space-md);
-        }
-
-        .essay-modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            width: 100%;
-            max-width: 800px;
-            max-height: 90vh;
-            overflow-y: auto;
-            padding: var(--space-xl);
-            position: relative;
-            animation: modalFadeIn 0.3s ease;
-        }
-
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-light);
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all var(--transition);
-        }
-
-        .close-modal:hover {
-            background: var(--primary-very-light);
-            color: var(--primary);
-        }
-
-        .modal-essay-content {
-            line-height: 1.8;
-            margin-top: var(--space-lg);
-        }
-
-        .modal-essay-content p {
-            margin-bottom: var(--space-md);
-        }
-
-        .modal-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: var(--space-xl);
-            padding-top: var(--space-md);
-            border-top: 1px solid var(--border);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .essay-sample-header {
-                flex-direction: column;
-            }
-            
-            .essay-sample-footer {
-                flex-direction: column;
-                gap: var(--space-md);
-                align-items: stretch;
-            }
-            
-            .essay-stats {
-                justify-content: space-between;
-            }
-            
-            .modal-content {
-                padding: var(--space-lg);
-            }
-        }
-
-        /* ===== Resources Section ===== */
-        .resources {
-            background-color: #f8fafc;
-            border-top: 1px solid #dbeafe;
-            border-bottom: 1px solid #dbeafe;
-        }
-
-        .resources-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-lg);
-            margin-bottom: var(--space-lg);
-        }
-
-        @media (min-width: 1050px) {
-            .resources-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .resource-category {
-            background-color: var(--white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            box-shadow: var(--shadow);
-            border: 1px solid #dbeafe;
-            transition: transform var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-
-        .resource-category.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .resource-category:nth-child(1) { transition-delay: 0.1s; }
-        .resource-category:nth-child(2) { transition-delay: 0.2s; }
-        .resource-category:nth-child(3) { transition-delay: 0.3s; }
-
-        .resource-category:hover {
+        .personal-card:hover {
             transform: translateY(-5px);
         }
 
-        .category-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--space-md);
-            padding-bottom: var(--space-sm);
-            border-bottom: 2px solid #eff6ff;
-        }
-
-        .category-icon {
-            font-size: 1.75rem;
-            margin-right: var(--space-sm);
-            /* background-color: #eff6ff; */
-            width: 50px;
-            height: 50px;
+        .personal-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #3b82f6;
-            transition: all var(--transition);
-        }
-
-        .resource-category:hover .category-icon {
-            transform: rotate(15deg) scale(1.1);
-            /* background-color: var(--primary); */
+            margin: 0 auto 1rem;
+            font-size: 2.5rem;
             color: white;
+            box-shadow: 0 8px 20px rgba(90,141,166,0.3);
         }
 
-        .resource-category h3 {
-            color: var(--primary);
-            margin-bottom: 0;
-        }
-
-        .resource-list {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
-        }
-
-        .resource-link {
-            display: block;
-            padding-bottom: var(--space-md);
-            border-bottom: 1px solid #dbeafe;
-            transition: border-color var(--transition), transform var(--transition);
-        }
-
-        .resource-link:last-child {
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .resource-link:hover {
-            border-bottom-color: var(--primary);
-            transform: translateX(5px);
-        }
-
-        .resource-title {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            color: var(--text);
-            transition: color var(--transition);
-        }
-
-        .resource-link:hover .resource-title {
+        .personal-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
             color: var(--primary);
         }
 
-        .resource-desc {
-            font-size: var(--font-sm);
+        .personal-card .title {
+            font-size: 0.85rem;
             color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .personal-card .bio {
+            font-size: 0.85rem;
+            color: var(--text);
             line-height: 1.5;
         }
 
-        .resources-note {
+        .personal-tags {
             display: flex;
-            align-items: center;
-            gap: var(--space-md);
-            background-color: #eff6ff;
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            border-left: 4px solid var(--primary);
-            transition: transform var(--transition);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
         }
 
-        .resources-note:hover {
-            transform: translateY(-3px);
+        .personal-tag {
+            background: var(--primary-very-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: var(--primary);
         }
 
-        .note-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .resources-note p {
-            margin-bottom: 0;
-        }
-
-        /* ===== Free Resources Section ===== */
-        .free-resources {
-            background-color: var(--white);
-        }
-
-        .free-resources-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-lg);
-            margin-bottom: var(--space-lg);
-        }
-
-        @media (min-width: 768px) {
-            .free-resources-grid {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            .hero-badge {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .stat-item {
+                text-align: center;
+            }
+            .personal-card {
+                max-width: 350px;
+                margin: 0 auto;
             }
         }
 
-        .free-resource-card {
-            background-color: var(--off-white);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
+        /* Hub Section */
+        .hub-section {
+            padding: 5rem 0;
+            background: var(--off-white);
+        }
+
+        .section-header {
             text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .hub-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.25s ease;
             border: 1px solid var(--border);
-            transition: transform var(--transition), box-shadow var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .hub-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-light);
+            box-shadow: 0 20px 35px -12px rgba(90, 141, 166, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .hub-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .hub-card p {
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .tag-group {
             display: flex;
-            flex-direction: column;
-            height: 100%;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 1rem;
         }
 
-        .free-resource-card.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .tag {
+            background: var(--primary-very-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary);
         }
 
-        .free-resource-card:nth-child(1) { transition-delay: 0.1s; }
-        .free-resource-card:nth-child(2) { transition-delay: 0.2s; }
-        .free-resource-card:nth-child(3) { transition-delay: 0.3s; }
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--white) 0%, var(--secondary) 100%);
+        }
 
-        .free-resource-card:hover {
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-lg);
             border-color: var(--primary-light);
         }
 
-        .resource-icon {
-            font-size: 2.5rem;
-            margin-bottom: var(--space-md);
-            transition: transform var(--transition);
-        }
-
-        .free-resource-card:hover .resource-icon {
-            transform: scale(1.2);
-        }
-
-        .free-resource-card h3 {
-            margin-bottom: var(--space-md);
-            transition: color var(--transition);
-        }
-
-        .free-resource-card:hover h3 {
-            color: var(--primary-light);
-        }
-
-        .free-resource-card p {
-            flex: 1;
-            margin-bottom: var(--space-md);
-            color: var(--text-light);
-        }
-
-        .download-btn {
-            background-color: var(--primary);
-            color: var(--white);
-            border: none;
-            padding: var(--space-sm) var(--space-md);
-            border-radius: var(--radius);
-            font-weight: 500;
-            font-size: var(--font-sm);
-            cursor: pointer;
-            transition: background-color var(--transition), transform var(--transition);
-        }
-
-        .download-btn:hover {
-            background-color: var(--primary-light);
-            transform: translateY(-2px);
-            color: var(--white);
-        }
-
-        .free-resources-note {
-            text-align: center;
-            font-style: italic;
-            color: var(--text-light);
-            padding: var(--space-md);
-            background-color: var(--primary-very-light);
-            border-radius: var(--radius);
-            margin-top: var(--space-lg);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            border-left: 4px solid var(--primary);
-            transition: transform var(--transition);
-        }
-
-        .free-resources-note:hover {
-            transform: translateY(-3px);
-        }
-
-        .free-resources-note p {
-            margin-bottom: 0;
-            line-height: 1.6;
-        }
-
-        /* ===== FAQ Section ===== */
-        .faq {
-            background-color: var(--secondary);
-        }
-
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            margin-bottom: var(--space-sm);
-            overflow: hidden;
-            background-color: var(--off-white);
-            transition: all var(--transition);
-        }
-
-        .faq-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .faq-item:nth-child(1) { transition-delay: 0.1s; }
-        .faq-item:nth-child(2) { transition-delay: 0.2s; }
-        .faq-item:nth-child(3) { transition-delay: 0.3s; }
-        .faq-item:nth-child(4) { transition-delay: 0.4s; }
-        .faq-item:nth-child(5) { transition-delay: 0.5s; }
-
-        .faq-question {
-            width: 100%;
-            background: var(--white);
-            border: none;
-            padding: var(--space-lg);
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            font-family: 'Comfortaa', sans-serif;
-            font-size: var(--font-md);
-            font-weight: 500;
-            color: var(--primary);
-            transition: background-color var(--transition);
-        }
-
-        .faq-question:hover {
-            background-color: var(--off-white);
-        }
-
-        .faq-icon {
-            font-size: 1.5rem;
-            font-weight: 300;
-            transition: transform var(--transition-slow);
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            padding: 0 var(--space-lg);
-            max-height: 0;
-            overflow: hidden;
-            transition: all var(--transition-slow);
-        }
-
-        .faq-item.active .faq-answer {
-            padding: var(--space-md) var(--space-lg) var(--space-lg);
-            max-height: 1000px;
-        }
-
-        /* ===== Contact Section ===== */
-        .contact {
-            background-color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 10% 20%, rgba(90, 141, 166, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 90% 80%, rgba(248, 245, 240, 0.05) 0%, transparent 50%);
-            z-index: 1;
-        }
-
-        .contact-grid {
-            position: relative;
-            z-index: 2;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-xl);
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 992px) {
-            .contact-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        /* ===== Contact Section Responsive Fixes ===== */
-@media (max-width: 767px) {
-    .contact {
-        padding: var(--space-lg) 0;
-        overflow-x: hidden; /* Prevent horizontal scroll */
-    }
-    
-    .contact-grid {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-lg);
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 var(--space-sm);
-    }
-    
-    .contact-info,
-    .contact-form-container {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: var(--space-md);
-        box-sizing: border-box;
-    }
-    
-    .contact-form {
-        width: 100%;
-    }
-    
-    .form-control {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    select.form-control {
-        width: 100%;
-    }
-    
-    /* Fix any overflow issues */
-    .contact-item {
-        flex-wrap: wrap;
-    }
-    
-    .contact-item-content {
-        min-width: 0; /* Allow text wrapping */
-    }
-}
-
-/* Also add this for very small screens */
-@media (max-width: 480px) {
-    .contact-info,
-    .contact-form-container {
-        padding: var(--space-sm);
-    }
-    
-    .contact-details {
-        gap: var(--space-md);
-    }
-    
-    .contact-item {
-        padding: var(--space-sm);
-    }
-    
-    .form-group {
-        gap: var(--space-xs);
-    }
-    
-    .btn-primary {
-        width: 100%;
-        padding: var(--space-md);
-    }
-
-    .contact-itemicon {
-        display: none
-    }
-}
-
-        .contact-info {
-            background-color: var(--primary-very-light);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            transition: transform var(--transition);
-        }
-
-        .contact-info:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-info-header {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-lg);
-        }
-
-        .contact-icon {
+        .quote-icon {
             font-size: 2rem;
-            background-color: var(--white);
-            width: 60px;
-            height: 60px;
+            color: var(--primary-light);
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-very-light), var(--secondary-dark));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow);
-            transition: transform var(--transition);
-        }
-
-        .contact-info:hover .contact-icon {
-            transform: rotate(15deg) scale(1.1);
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-lg);
-            margin-bottom: var(--space-lg);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-md);
-            padding: var(--space-md);
-            background-color: var(--white);
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            transition: transform var(--transition), box-shadow var(--transition);
-        }
-
-        .contact-item:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        .contact-item-icon {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--primary);
-            flex-shrink: 0;
-            transition: transform var(--transition);
         }
 
-        .contact-item:hover .contact-item-icon {
-            transform: scale(1.2);
+        .author-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: var(--text);
         }
 
-        .contact-item-content {
-            flex: 1;
+        .author-info p {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin: 0;
         }
 
-        .contact-item-title {
+        .testimonial-service {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--primary-very-light);
+            border-radius: 20px;
+            font-size: 0.7rem;
             font-weight: 600;
             color: var(--primary);
-            margin-bottom: 0.25rem;
+            margin-bottom: 1rem;
         }
 
-        .contact-item-desc {
-            font-size: var(--font-sm);
-            color: var(--text-light);
-        }
-
-        .contact-note {
-            background-color: var(--white);
-            padding: var(--space-md);
-            border-radius: var(--radius);
-            border-left: 4px solid var(--primary);
-            font-size: var(--font-sm);
-        }
-
-        .contact-note p {
-            margin-bottom: 0;
-        }
-
-        .contact-form-container {
-            background-color: var(--white);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            transition: transform var(--transition);
-        }
-
-        .contact-form-container:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-xs);
-        }
-
-        .form-label {
-            font-weight: 500;
-            color: var(--text);
-            font-size: var(--font-sm);
-        }
-
-        .form-control {
-            padding: var(--space-sm);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            font-family: 'Comfortaa', sans-serif;
-            font-size: var(--font-sm);
-            transition: border-color var(--transition), box-shadow var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(90, 141, 166, 0.1);
-        }
-
-        .form-control::placeholder {
-            color: var(--text-light);
-            opacity: 0.7;
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .form-checkbox {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-            margin-top: var(--space-sm);
-        }
-
-        .form-checkbox input {
-            margin-top: 0.25rem;
-            flex-shrink: 0;
-        }
-
-        .form-checkbox label {
-            font-size: var(--font-sm);
-            color: var(--text-light);
-            line-height: 1.4;
-        }
-
-        .form-checkbox a {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-
-        .form-checkbox a:hover {
-            color: var(--primary-light);
-        }
-
-        .form-message {
-            padding: var(--space-sm);
-            border-radius: var(--radius);
-            font-size: var(--font-sm);
-            text-align: center;
-            display: none;
-        }
-
-        .form-message.success {
-            background-color: rgba(76, 175, 80, 0.1);
-            color: var(--success);
-            border: 1px solid rgba(76, 175, 80, 0.2);
-            display: block;
-        }
-
-        .form-message.error {
-            background-color: rgba(244, 67, 54, 0.1);
-            color: var(--error);
-            border: 1px solid rgba(244, 67, 54, 0.2);
-            display: block;
-        }
-
-        @media (max-width: 480px) {
-            .contact-item-icon {
-                display: none;
-            }
-            
-            .contact-icon {
-                display: none;
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
             }
         }
 
-        /* ===== Footer ===== */
+        /* Footer */
         .footer {
-            background-color: var(--white);
-            padding: var(--space-xl) 0 var(--space-lg);
+            background: linear-gradient(180deg, var(--white) 0%, var(--secondary) 100%);
             border-top: 1px solid var(--border);
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.02);
+            padding: 4rem 0 2rem;
+            position: relative;
+            margin-top: 0;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(180deg, transparent, var(--secondary));
+            pointer-events: none;
         }
 
         .footer-content {
             text-align: center;
         }
 
-        .footer-disclaimer {
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
             background-color: var(--primary-very-light);
-            padding: var(--space-md);
-            border-radius: var(--radius);
-            margin-bottom: var(--space-lg);
-            font-size: var(--font-sm);
-            border-left: 4px solid var(--primary);
-            transition: transform var(--transition);
+            border-radius: 50%;
+            color: var(--primary);
+            font-size: 1.25rem;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            text-decoration: none;
         }
 
-        .footer-disclaimer:hover {
-            transform: translateY(-3px);
+        .social-link i {
+            font-size: 1.1rem;
         }
 
-        .footer-info {
-            margin-bottom: var(--space-lg);
+        .social-link:hover:nth-child(1) { background-color: #0077b5; border-color: #0077b5; color: white; transform: translateY(-3px) scale(1.1); }
+        .social-link:hover:nth-child(2) { background-color: #e4405f; border-color: #e4405f; color: white; transform: translateY(-3px) scale(1.1); }
+        .social-link:hover:nth-child(3) { background-color: #ff0000; border-color: #ff0000; color: white; transform: translateY(-3px) scale(1.1); }
+        .social-link:hover:nth-child(4) { background-color: #000000; border-color: #000000; color: white; transform: translateY(-3px) scale(1.1); }
+
+        .footer-text {
             color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
 
-        .footer-note {
-            font-size: var(--font-xs);
-            margin-top: var(--space-sm);
-            font-style: italic;
-        }
-
-        .footer-contact {
+        .footer-small {
+            font-size: 0.75rem;
             color: var(--text-light);
-            font-size: var(--font-sm);
+            opacity: 0.7;
         }
 
-        .footer-contact a {
-            transition: color var(--transition);
+        .footer-email {
+            margin-top: 1rem;
         }
 
-        .footer-contact a:hover {
-            color: var(--primary-light);
+        .footer-email a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        .copyright {
-            margin-top: var(--space-sm);
+        .footer-email a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <span class="logo-icon"><img src="./images/PolarPrep.png" alt="PolarPrep Logo"></span>
-                    <span class="logo-text">PolarPrep</span>
-                </a>
-                
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <span class="menu-toggle-line"></span>
-                    <span class="menu-toggle-line"></span>
-                    <span class="menu-toggle-line"></span>
-                </button>
-                
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="#hero" class="nav-link">Home</a></li>
-                        <li><a href="#about" class="nav-link">About</a></li>
-                        
-                        <!-- Essays Dropdown -->
-                        <li class="nav-item-has-children">
-                            <a href="#essays" class="nav-link">Essays <span class="dropdown-icon">▾</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#essays" class="dropdown-link">My Essays</a></li>
-                                <li><a href="#purchase-essays" class="dropdown-link">Purchase My Essays</a></li>
-                            </ul>
-                        </li>
-                        
-                        <!-- Resources Dropdown -->
-                        <li class="nav-item-has-children">
-                            <a href="#my-free-resources" class="nav-link">Resources <span class="dropdown-icon">▾</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#my-free-resources" class="dropdown-link">My Free Resources</a></li>
-                                <li><a href="#resources" class="dropdown-link">External Resources</a></li>
-                            </ul>
-                        </li>
-                        
-                        <li><a href="#services" class="nav-link">Services</a></li>
-                        <li><a href="#faq" class="nav-link">FAQ</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="hero"class="hero">
+<!-- EXACT ORIGINAL HEADER STRUCTURE -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-compass"></i></span>
+                <span class="logo-text">aldrich.nexus</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-line"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#hub" class="nav-link">Services</a></li>
+                    <li><a href="#testimonials" class="nav-link">Stories</a></li>
+                    <li><a href="#contact" class="nav-link">Connect</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero with Personal Feature -->
+    <section class="hero" id="home">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-orb"></div>
+        <div class="hero-orb-2"></div>
+        
         <div class="container">
             <div class="hero-grid">
-                <div class="hero-content">
+                <div class="hero-left">
                     <div class="hero-badge">
-                        <span class="badge-icon">🎓</span>
-                        <span class="badge-text">QuestBridge-Admitted Student</span>
+                        <i class="fa-regular fa-compass"></i> welcome to the hub
                     </div>
-                    
-                    <h1 class="hero-title">PolarPrep</h1>
-                    <p class="hero-subtitle">Peer-based feedback and high school planning from a student who's been through it</p>
-                    
-                    <div class="hero-features">
-                        <div class="feature">
-                            <span class="feature-icon">💬</span>
-                            <span class="feature-text">Personal, one-on-one feedback</span>
+                    <h1 class="hero-title">
+                        aldrich ·<br><span class="gradient-text">creative mentor</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        College guidance · Music production · Watchmaking · Student tools — a central space for mentorship and creative projects.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">students guided</div>
                         </div>
-                        <div class="feature">
-                            <span class="feature-icon">✍️</span>
-                            <span class="feature-text">Student-centered approach</span>
+                        <div class="stat-item">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">service areas</div>
                         </div>
-                        <div class="feature">
-                            <span class="feature-icon">🎯</span>
-                            <span class="feature-text">Focused on your authentic voice</span>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">peer support</div>
                         </div>
                     </div>
-                    
-                    <div class="hero-actions">
-                        <a href="#services" class="btn btn-primary">Explore Services</a>
-                        <a href="#contact" class="btn btn-outline">Get in Touch</a>
-                    </div>
-                    
-                    <div class="hero-note">
-                        <p><strong>Important:</strong> I'm <em>not</em> a professional consultant. This is peer guidance from a QuestBridge Scholar.</p>
+                    <div class="btn-group">
+                        <a href="#hub" class="btn btn-primary">explore services →</a>
+                        <a href="#testimonials" class="btn btn-outline">hear stories</a>
                     </div>
                 </div>
-                
-                <div class="hero-visual">
-                    <div class="visual-elements">
-                        <!-- Paper sheet -->
-                        <div class="paper">
-                            <div class="paper-lines">
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                            </div>
-                            <div class="paper-text">"Finding my voice..."</div>
+                <div class="hero-right">
+                    <div class="personal-card">
+                        <div class="personal-avatar">
+                            <i class="fa-regular fa-user"></i>
                         </div>
-                        
-                        <!-- Pencil -->
-                        <div class="pencil">
-                            <div class="pencil-tip"></div>
-                            <div class="pencil-body"></div>
-                            <div class="pencil-eraser"></div>
+                        <h3>Aldrich Jad Sy Magpali</h3>
+                        <div class="title">QuestBridge Scholar · Creative Mentor</div>
+                        <div class="bio">
+                            Current college student at the #1 National Liberal Arts College on a full ride through QuestBridge. Peer-based guidance from someone who's been through it.
                         </div>
-                        
-                        <!-- Graduation Cap Emoji (replaces books) -->
-                        <div class="graduation-cap">
-                            🎓
-                        </div>
-                        
-                        <!-- Quote card -->
-                        <div class="quote">
-                            <div class="quote-content">
-                                <div class="quote-mark">"</div>
-                                <p>The best essays aren't perfect—they're authentic</p>
-                                <div class="quote-author">— My approach to essay feedback</div>
-                            </div>
+                        <div class="personal-tags">
+                            <span class="personal-tag">QuestBridge</span>
+                            <span class="personal-tag">Full Ride</span>
+                            <span class="personal-tag">First-Gen</span>
+                            <span class="personal-tag">STEM</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="hero-stats">
-                <!-- <div class="stat">
-                    <div class="stat-number">100+</div>
-                    <div class="stat-label">Essays Reviewed</div>
-                </div> -->
-                <div class="stat">
-                    <div class="stat-number">QuestBridge</div>
-                    <div class="stat-label">Admission Path</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">Peer-Based</div>
-                    <div class="stat-label">Guidance Only</div>
                 </div>
             </div>
         </div>
-        
-        <!-- Scroll hint - only shows on tall screens -->
-        <div class="scroll-hint">
-            <span>Scroll to explore</span>
-            <div class="arrow">↓</div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section>
+        <img src="https://cdn.discordapp.com/attachments/733413124887150704/1478525999250407434/SPOILER_03021-ezgif.com-video-to-gif-converter.gif?ex=69c467a3&is=69c31623&hm=bf011034c8c2cbf3dc7f22a05a43761ef4fe51d8dc14ab31f00b567adbb46b33&" alt="Illustration of mentorship and creativity" style="width: 100%; margin-top: -4rem; opacity: 0.8;">
+    </section>
+
+    <!-- Services Hub Section -->
+    <section class="hub-section" id="hub">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚡ service constellations ⚡</h2>
+                <p>each zone has its own dedicated page — dive deeper into what you need</p>
+            </div>
+            <div class="hub-grid">
+                <div class="hub-card" data-service="college">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>college hub</h3>
+                    <p>QuestBridge mentoring, essay deep-dives, scholarship strategy & application roadmap. Built for first-gen, low-income strivers.</p>
+                    <div class="tag-group"><span class="tag">essay reviews</span><span class="tag">full-ride</span><span class="tag">peer guidance</span></div>
+                </div>
+                <div class="hub-card" data-service="student">
+                    <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>student corner</h3>
+                    <p>Free Notion templates, study planners, productivity tools & resource vault for high school & college life.</p>
+                    <div class="tag-group"><span class="tag">free downloads</span><span class="tag">templates</span><span class="tag">workflow</span></div>
+                </div>
+                <div class="hub-card" data-service="music">
+                    <div class="card-icon"><i class="fa-solid fa-headphones"></i></div>
+                    <h3>music lab</h3>
+                    <p>Beat making, vocal mixing, production feedback, and sonic branding — from demo to polished.</p>
+                    <div class="tag-group"><span class="tag">production</span><span class="tag">mixing</span><span class="tag">consultation</span></div>
+                </div>
+                <div class="hub-card" data-service="watch">
+                    <div class="card-icon"><i class="fa-regular fa-clock"></i></div>
+                    <h3>watchmaking workshop</h3>
+                    <p>Repair, restoration, movement servicing, modding guides & horology deep dives for enthusiasts.</p>
+                    <div class="tag-group"><span class="tag">repair</span><span class="tag">modding</span><span class="tag">restoration</span></div>
+                </div>
+                <div class="hub-card" data-service="creative">
+                    <div class="card-icon"><i class="fa-regular fa-pen-to-square"></i></div>
+                    <h3>creative studio</h3>
+                    <p>Visual identity, portfolio reviews, storytelling & creative direction for artists & side projects.</p>
+                    <div class="tag-group"><span class="tag">branding</span><span class="tag">design</span><span class="tag">strategy</span></div>
+                </div>
+                <div class="hub-card" data-service="tech">
+                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>tech snippets</h3>
+                    <p>Automation scripts, no-code tools, web tweaks & dev help for students & makers.</p>
+                    <div class="tag-group"><span class="tag">automation</span><span class="tag">web tools</span><span class="tag">no-code</span></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="section about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About Me</h2>
-                    <p class="section-subtitle">QuestBridge National College Match Recipient & Gates Scholarship Semi-Finalist</p>
-                </div>
-                
-                <div class="about-content">
-                    <div class="profile">
-                        <div class="profile-image">
-                            <img src="images/headshot.jpg" alt="Aldrich Magpali - QuestBridge Student" class="profile-photo">
-                            <div class="profile-caption">Aldrich Jad Sy Magpali</div>
-                        </div>
-                        
-                        <div class="profile-text">
-                            <p class="intro">I am a current college student attending the <strong><span style="color: #cf6161;">#1 National Liberal Arts College</span></strong> in the United States on a <strong><span style="color: #cf6161;">full ride</span></strong> through the QuestBridge National College Match program. I offer <strong>peer-based guidance</strong> on college essays and high school planning.</p>
-                            
-                            <div class="disclaimer-box">
-                                <p>📝 <strong>Important to know:</strong> I am <strong>not a professional college consultant</strong>. All feedback comes from my personal experience as a student who recently navigated the admissions process.</p>
-                            </div>
-                            
-                            <p>I believe that authenticity and vulnerability are key to crafting a compelling application. Many top colleges receive applicants with stellar stats: 4.0 GPA, perfect SAT or ACT. What differentiates you from others is <strong><span style="color: var(--primary);">your unique story.</span></strong></p>
-                            
-                            <p>I can best assist students from low-income/first-generation backgrounds who wish to pursue a STEM major.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Place this RIGHT AFTER your about section closing tag -->
-        <section id="my-free-resources" class="free-products">
-        <div class="section-header">
-            <h2>My Free Resources</h2>
-            <p class="subtitle">Your success means more to me than payment. Pay it forward once you become successful.</p>
-        </div>
-        
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-            <div class="product-badge">Free</div>
-            <div class="product-icon">🏫</div>
-            <h3>College List</h3>
-            <p>Comprehensive Google Sheet to help you stay organized during college search & applciation</p>
-            <ul class="product-features">
-                <li>Location & population</li>
-                <li>Academic stats</li>
-                <li>Progress tracker</li>
-            </ul>
-            <a href="https://payhip.com/b/9IPqe" target="_blank" class="download-btn">Download Now</a>
-            </div>
-            
-            <!-- Product 2 -->
-            <div class="product-card">
-            <div class="product-badge">Free</div>
-            <div class="product-icon">📝</div>
-            <h3>Essay Organizer</h3>
-            <p>Google Doc template for keeping track of college specific supplementals & personal statement</p>
-            <ul class="product-features">
-                <li>All-in-one tracking</li>
-                <li>Color coding</li>
-                <li>Pre-formatted</li>
-            </ul>
-            <a href="https://payhip.com/b/wBJQf" target="_blank" class="download-btn">Download Now</a>
-            </div>
-            
-            <!-- Product 3 -->
-            <div class="product-card">
-            <div class="product-badge">Free</div>
-            <div class="product-icon">🎓</div>
-            <h3>Tutorly</h3>
-            <p>My free peer-tutoring organization to help you succeed in all classes and prepare for exams</p>
-            <ul class="product-features">
-                <li>Live tutors</li>
-                <li>Videos</li>
-                <li>Practice sheets & notes</li>
-            </ul>
-            <a href="https://www.tutorlyonline.org" target="_blank" class="download-btn">Visit Website</a>
-            </div>
-        </div>
-        
-        <!-- <div class="cta-footer">
-            <p>Want more? Check out our <a href="/premium">premium essay services</a></p>
-        </div> -->
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="section services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Services</h2>
-                    <p class="section-subtitle">Peer-based guidance options</p>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-header">
-                            <h3>Line-by-Line Essay Review & Editing</h3>
-                        </div>
-                        <div class="service-body">
-                            <p>Detailed feedback on your personal statement or supplemental essays with line-by-line comments and overall structural suggestions.</p>
-                            <ul class="service-features">
-                                <li>Two rounds of feedback on one essay</li>
-                                <li>48-hour turnaround</li>
-                                <li>Follow-up email support</li>
-                                <li>1000 word limit</li>
-                            </ul>
-                        </div>
-                        <div class="service-footer">
-                            <div class="pricing-block">
-                            <!-- <div class="original-price">$99</div> -->
-                            <div class="current-price">$24.99</div>
-                            <div class="price-frequency">one-time fee</div>
-                        </div>
-                            <a href="./subpages/coming-soon.html" target="_blank" rel="noopener" class="service-btn">
-                                View in Shop →
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <h3>Personalized College Prep Roadmap</h3>
-                        </div>
-                        <div class="service-body">
-                            <p>45-minute guidance session to discuss course selection, extracurricular planning, and application timeline strategy.</p>
-                            <ul class="service-features">
-                                <li>Personalized roadmap</li>
-                                <li>Extracurricular brainstorming</li>
-                                <li>College application tips</li>
-                                <li>Scholarship hunting</li>
-                                <li>Post-session summary notes</li>
-                            </ul>
-                        </div>
-                        <div class="service-footer">
-                            <div class="pricing-block">
-                            <!-- <div class="original-price">$99</div> -->
-                            <div class="current-price">$29.99</div>
-                            <div class="price-frequency">one-time fee</div>
-                        </div>
-                            <a href="./subpages/coming-soon.html" target="_blank" rel="noopener" class="service-btn">
-                                View in Shop →
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-header">
-                            <h3>Holistic Application Review</h3>
-                        </div>
-                        <div class="service-body">
-                            <p>Holistic review of your application package including activity list, honors section, and overall narrative cohesion.</p>
-                            <ul class="service-features">
-                                <li>Full application review</li>
-                                <li>Activity list optimization</li>
-                                <li>Narrative consistency check</li>
-                                <li>Two 30-minute follow-up calls</li>
-                            </ul>
-                        </div>
-                        <div class="service-footer">
-                            <div class="pricing-block">
-                            <!-- <div class="original-price">$99</div> -->
-                            <div class="current-price">$49.99</div>
-                            <div class="price-frequency">one-time fee</div>
-                        </div>
-                            <a href="./subpages/coming-soon.html" target="_blank" rel="noopener" class="service-btn">
-                                View in Shop →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="services-note">
-                    <p><strong>Remember:</strong> This is peer guidance, not professional consulting. I don't write essays for students or guarantee admissions outcomes.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Essays Section -->
-        <section id="essays" class="section essays">
-            <div class="container">
-                <div class="section-header">
-                    <h2>My Essays</h2>
-                    <p class="section-subtitle">Reflections on my application writing process</p>
-                </div>
-                
-                <div class="essays-content">
-                    <p class="essays-intro">Here are some reflections on essays from my own application. I share these to illustrate my approach, not as templates to copy.</p>
-                    
-                    <div class="essays-accordion">
-                        <div class="accordion-item">
-                            <button class="accordion-toggle">
-                                <h3>Personal Statement: Finding my voice</h3>
-                                <span class="accordion-icon">+</span>
-                            </button>
-                            <div class="accordion-content">
-                                <p>My personal statement explored how working at at a young age taught me empathy and the passion to help others. The challenge was being vulnerable and using descriptive detail whilst being concise.</p>
-                                <p><strong>What worked:</strong> Starting with a metaphor, then expanding to show personal growth without being overly dramatic. I focused on authentic details rather than trying to sound impressive. A bookending also kept the story memorable.</p>
-                                <p><strong>Advice:</strong> Your most meaningful stories often come from everyday moments, not extraordinary events.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item">
-                            <button class="accordion-toggle">
-                                <h3>Supplemental Essay: Academic interests</h3>
-                                <span class="accordion-icon">+</span>
-                            </button>
-                            <div class="accordion-content">
-                                <p>This essay explained why I wanted to study biology through the lens of an issue faced by many low-income students.</p>
-                                <p><strong>What worked:</strong> Connecting academic interests to personal experiences. I showed genuine curiosity rather than repeating what I thought admissions wanted to hear.</p>
-                                <p><strong>Advice:</strong> Be specific about why you're drawn to a field. "I've always been interested in biology" is less compelling than describing the moment that sparked your curiosity.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item">
-                            <button class="accordion-toggle">
-                                <h3>Community Essay: Creating opportunities</h3>
-                                <span class="accordion-icon">+</span>
-                            </button>
-                            <div class="accordion-content">
-                                <p>I wrote about a project that initially struggled but eventually succeeded through consistent effort and passion.</p>
-                                <p><strong>What worked:</strong> Showing vulnerability by admitting the project's early failures, then demonstrating growth through problem-solving. This felt more authentic than a "success story."</p>
-                                <p><strong>Advice:</strong> Don't be afraid to show challenges or setbacks—they often reveal more about your character than easy successes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                <!-- Purchase Essays Section -->
-        <section id="purchase-essays" class="section purchase-essays">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Purchase My Essays</h2>
-                    <p class="section-subtitle">Learn from my successful application essays</p>
-                </div>
-                
-                <div class="essay-samples">
-                    <!-- Essay Sample 1 -->
-                    <div class="essay-sample">
-                        <div class="essay-sample-header">
-                            <div>
-                                <h3>Personal Statement: "I Used to Be Scared of Chips"</h3>
-                                <div class="essay-tags">
-                                    <span class="essay-tag">Common App</span>
-                                    <span class="essay-tag">650 Words</span>
-                                    <span class="essay-tag">QuestBridge</span>
-                                    <span class="essay-tag">800 Words</span>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <span class="original-price">$44.99</span>
-                                $19.99
-                            </div>
-                        </div>
-                        
-                        <div class="essay-sample-content">
-                            <p>This personal statement explores how working at a young age shaped me as a person and gave me the values I hold to this day.</p>
-                            
-                            <div class="essay-excerpt">
-                                I used to be scared of chips. An eight-ounce bag could either ruin my week or be a miracle in disguise...
-                            </div>
-                            
-                            <p><strong>What you'll learn:</strong> How to use specific sensory details, create emotional resonance, and structure a narrative that shows growth.</p>
-                        </div>
-                        
-                        <div class="essay-sample-footer">
-                            <div class="essay-stats">
-                                <div class="essay-stat">
-                                    <span>📄</span>
-                                    <span>Full annotated version</span>
-                                </div>
-                                <div class="essay-stat">
-                                    <span>🎯</span>
-                                    <span>Admission analysis</span>
-                                </div>
-                                <div class="essay-stat">
-                                    <span>💡</span>
-                                    <span>Writing tips</span>
-                                </div>
-                            </div>
-                            <div style="position: relative;">
-                                <button class="purchase-btn" data-essay="personal-statement">
-                                    <a href="./subpages/coming-soon.html" target="_blank" rel="noopener" class="service-btn">
-                                        View in Shop →
-                                    </a>
-                                </button>
-                                <!-- <div class="discount-badge">40% OFF</div> -->
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Essay Sample 2 -->
-                    <div class="essay-sample">
-                        <div class="essay-sample-header">
-                            <div>
-                                <h3>QuestBridge Short Answer Questions</h3>
-                                <div class="essay-tags">
-                                    <span class="essay-tag">Supplemental</span>
-                                    <span class="essay-tag">Non-Academic</span>
-                                    <span class="essay-tag">35 Characters</span>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <span class="original-price">$14.99</span>
-                                $4.99
-                            </div>
-                        </div>
-                        
-                        <div class="essay-sample-content">
-                            <p>These short one-sentence questions are short but impactful. In under 35 characters, I give admissions officers a glimpse of my personality.</p>
-                            
-                            <div class="essay-excerpt">
-                                When offering my brag sheet to my teacher, she declined, saying...
-                            </div>
-                            
-                            <p><strong>What you'll learn:</strong> How to approach these short questions with authenticity and illustrative details without breaking the character limit.</p>
-                        </div>
-                        
-                        <div class="essay-sample-footer">
-                            <div class="essay-stats">
-                                <div class="essay-stat">
-                                    <span>📄</span>
-                                    <span>All answers</span>
-                                </div>
-                                <div class="essay-stat">
-                                    <span>📘</span>
-                                    <span>Using figurative language</span>
-                                </div>
-                                <div class="essay-stat">
-                                    <span>📝</span>
-                                    <span>Brainstorming guide</span>
-                                </div>
-                            </div>
-                            <button class="purchase-btn" data-essay="biology-essay">
-                                <a href="./subpages/coming-soon.html" target="_blank" rel="noopener" class="service-btn">
-                                    View in Shop →
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Essay Sample 3 -->
-                    <div class="essay-sample">
-                        <div class="essay-sample-header">
-                            <div>
-                                <h3>Activities + Activities Writing</h3>
-                                <div class="essay-tags">
-                                    <span class="essay-tag">Community</span>
-                                    <span class="essay-tag">Collaboration</span>
-                                    <span class="essay-tag">100 Characters</span>
-                                    <span class="essay-tag">Leadership</span>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <span class="original-price">$14.99</span>
-                                $4.99
-                            </div>
-                        </div>
-                        
-                        <div class="essay-sample-content">
-                            <p>The activities essay dives deep into my passion project and reveals why I started it.</p>
-                            
-                            <div class="essay-excerpt">
-                                Sometimes students aren't willing to reach out for support, or their teacher's method of explaining doesn't click...
-                            </div>
-                            
-                            <p><strong>What you'll learn:</strong> How to maximize the impact of your activities essay within the 100-character limit.</p>
-                        </div>
-                        
-                        <div class="essay-sample-footer">
-                            <div class="essay-stats">
-                                <div class="essay-stat">
-                                    <span>📄</span>
-                                    <span>Essay + reflections</span>
-                                </div>
-                                <div class="essay-stat">
-                                    <span>🤝</span>
-                                    <span>Teamwork examples</span>
-                                </div>
-                                <div class="essay-stat">
-                                    <span>📈</span>
-                                    <span>Growth narrative guide</span>
-                                </div>
-                            </div>
-                            <button class="purchase-btn" data-essay="community-essay">
-                                <a href="./subpages/coming-soon.html" target="_blank" rel="noopener" class="service-btn">
-                                    View in Shop →
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="purchase-note">
-                    <p><strong>Important:</strong> These essays are for <strong>educational purposes only</strong>. They're meant to inspire your own writing and show what successful essays look like. <strong>Never copy or plagiarize</strong>—admissions officers can detect this and it will result in rejection.</p>
-                </div>
-            </div>
-            
-            <!-- Essay Preview Modal -->
-            <div class="essay-modal" id="essay-modal">
-                <div class="modal-content">
-                    <button class="close-modal" id="close-modal">×</button>
-                    <h3 id="modal-title">Personal Statement: "Finding My Voice"</h3>
-                    
-                    <div class="essay-tags" id="modal-tags">
-                        <span class="essay-tag">Common App</span>
-                        <span class="essay-tag">Personal Statement</span>
-                    </div>
-                    
-                    <div class="modal-essay-content" id="modal-content">
-                        <!-- Content will be loaded by JavaScript -->
-                        <p class="loading">Loading preview...</p>
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <div>
-                            <p style="font-size: var(--font-sm); color: var(--text-light); margin-bottom: 0;">
-                                Preview limited to first 200 words. Purchase for full essay + analysis.
-                            </p>
-                        </div>
-                        <button class="btn btn-primary" id="purchase-full-btn">
-                            Purchase Full Essay - $29
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resources Section -->
-        <section id="resources" class="section resources">
-            <div class="container">
-                <div class="section-header">
-                    <h2>External Resources</h2>
-                    <p class="section-subtitle">Resources I personally found helpful during my application process</p>
-                </div>
-                
-                <div class="resources-grid">
-                    <div class="resource-category">
-                        <div class="category-header">
-                            <div class="category-icon">📝</div>
-                            <h3>Writing & Essays</h3>
-                        </div>
-                        <div class="resource-list">
-                            <a href="https://apply.jhu.edu/college-planning-guide/essays-that-worked/" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">JHU: Essays That Worked</div>
-                                <div class="resource-desc">Essays of students admitted into Johns Hopkins University.</div>
-                            </a>
-                            <a href="https://www.commonapp.org/blog/announcing-2025-2026-common-app-essay-prompts" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">Common App Essay Prompts</div>
-                                <div class="resource-desc">Prompts from the Common App typically do not change: get started now.</div>
-                            </a>
-                            <a href="https://www.collegeessayguy.com/blog" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">College Essay Guy Blog</div>
-                                <div class="resource-desc">Essays and exercises for brainstorming your personal statement.</div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="resource-category">
-                        <div class="category-header">
-                            <div class="category-icon">🎓</div>
-                            <h3>Planning & Admissions</h3>
-                        </div>
-                        <div class="resource-list">
-                            <a href="https://www.questbridge.org" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">QuestBridge</div>
-                                <div class="resource-desc"><strong>National College Match Program:</strong> Guaranteed full ride if admitted.<p><strong>College Prep Scholars:</strong> Early access to essay prompts & increased likelyhood of becoming a Finalist.</p></div>
-                            </a>
-                            <a href="https://www.oneprep.xyz" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">OnePrep</div>
-                                <div class="resource-desc">Free SAT prep resource.</div>
-                            </a>
-                            <a href="https://www.tineocollegeprep.com" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">Tineo College Prep</div>
-                                <div class="resource-desc">Follow on his socials! Best person to follow for opportunities, college-prep, and other news.</div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="resource-category">
-                        <div class="category-header">
-                            <div class="category-icon">🔍</div>
-                            <h3>College Search</h3>
-                        </div>
-                        <div class="resource-list">
-                            <a href="https://www.collegetransitions.com/dataverse/common-data-set-repository" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">Common Data Set</div>
-                                <div class="resource-desc">Search up "[College Name] Common Data Set" to get more info on the statistics of admitted students and applicants.</div>
-                            </a>
-                            <a href="https://www.usnews.com/best-colleges" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">U.S. News</div>
-                                <div class="resource-desc">Get more info on a college's population, diversity, cost, etc.</div>
-                            </a>
-                            <a href="https://www.reddit.com" target="_blank" rel="noopener" class="resource-link">
-                                <div class="resource-title">Reddit</div>
-                                <div class="resource-desc">Great for seeing what current students think about their school! (Avoid r/ApplyToCollege—it's very toxic).</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="resources-note">
-                    <div class="note-icon">💡</div>
-                    <p>These are resources I personally found valuable during my application journey. I'm not affiliated with any of these organizations—I just found them helpful.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Free Resources Section -->
-        <!-- <section id="free-resources" class="section free-resources">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Free Resources</h2>
-                    <p class="section-subtitle">Helpful tools to support your planning process</p>
-                </div>
-                
-                <div class="free-resources-grid">
-                    <div class="free-resource-card">
-                        <div class="resource-icon">✏️</div>
-                        <h3>Essay Brainstorming Worksheet</h3>
-                        <p>A structured guide to help you identify meaningful stories and articulate your values.</p>
-                        <a href="#" target="_blank" rel="noopener" class="download-btn">Download PDF</a>
-                    </div>
-                    
-                    <div class="free-resource-card">
-                        <div class="resource-icon">📅</div>
-                        <h3>High School Planning Checklist</h3>
-                        <p>Year-by-year guide to academic, extracurricular, and application preparation.</p>
-                        <a href="#" target="_blank" rel="noopener" class="download-btn">Download PDF</a>
-                    </div>
-                    
-                    <div class="free-resource-card">
-                        <div class="resource-icon">⏰</div>
-                        <h3>Application Timeline</h3>
-                        <p>Monthly breakdown of tasks for junior spring through senior fall.</p>
-                        <a href="#" target="_blank" rel="noopener" class="download-btn">Download PDF</a>
-                    </div>
-                </div>
-                
-                <div class="free-resources-note">
-                    <p>All resources are completely free. I create these based on what would have helped me during my own process.</p>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- FAQ Section -->
-        <section id="faq" class="section faq">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Frequently Asked Questions</h2>
-                    <p class="section-subtitle">Clear answers about my approach</p>
-                </div>
-                
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Are you a professional college consultant?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>No, I am not a professional college consultant. I'm a current college student who was admitted through QuestBridge. My guidance comes from personal experience and peer-to-peer support, not professional training.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do you write essays for students?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Absolutely not. I provide feedback and suggestions to help you improve your own writing, but I will never write essays for you. Maintaining academic integrity and your authentic voice is essential.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What does "peer-based guidance" mean?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>It means I offer perspective as someone who recently went through the college application process myself. I understand the student experience firsthand—the anxieties, questions, and challenges—because I've been there. My guidance is informed by lived experience rather than professional training.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Can you guarantee admissions results?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>No one can guarantee admissions results. College admissions involve many factors beyond essays. I help you present your best self through your writing, but I don't make promises about outcomes.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Who is this guidance best for?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>My approach works best for students who want thoughtful, honest feedback from a peer perspective. It's particularly helpful if you're looking for someone who understands the QuestBridge application process or if you prefer a more personal, student-to-student connection rather than a formal consulting relationship.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get in Touch</h2>
-                    <p class="section-subtitle">Have questions? I'd love to hear from you</p>
-                </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-info-header">
-                            <div class="contact-icon">📧</div>
-                            <h3>Contact Information</h3>
-                        </div>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-item-icon">✉️</div>
-                                <div class="contact-item-content">
-                                    <div class="contact-item-title">Email</div>
-                                    <div class="contact-item-desc">Fill out the form below to send an email</div>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-item-icon">⏰</div>
-                                <div class="contact-item-content">
-                                    <div class="contact-item-title">Response Time</div>
-                                    <div class="contact-item-desc">Typically within 24-48 hours</div>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-item-icon">💬</div>
-                                <div class="contact-item-content">
-                                    <div class="contact-item-title">Best For</div>
-                                    <div class="contact-item-desc">General inquiries and service questions</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-note">
-                            <p><strong>Note:</strong> I'm a current student, so please allow up to 48 hours for a response during busy academic periods.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form-container">
-                        <h3>Send a Message</h3>
-                        <form class="contact-form" id="contact-form" action="https://formspree.io/f/maqqekgp" method="POST">
-                        <!-- Add these hidden fields -->
-                        <input type="hidden" name="_next" value="https://your-site-url.com/thank-you.html">
-                        <input type="hidden" name="_subject" value="New Contact Form Submission">
-                        
-                        <!-- Make sure ALL fields have NAME attributes -->
-                        <div class="form-group">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your first & last name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="grade-level" class="form-label">Grade Level</label>
-                            <select id="grade-level" name="grade-level" class="form-control" required>
-                                <option value="" disabled selected>Select your grade</option>
-                                <option value="Freshman">Freshman</option>
-                                <option value="Sophomore">Sophomore</option>
-                                <option value="Junior">Junior</option>
-                                <option value="Senior">Senior</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <select id="subject" name="subject" class="form-control" required>
-                                <option value="" disabled selected>Select a topic</option>
-                                <option value="Service Inquiry">Service Inquiry</option>
-                                <option value="General Question">General Question</option>
-                                <option value="Essay Feedback">Essay Feedback Request</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Tell me about your needs or questions..." required></textarea>
-                        </div>
-                        
-                        <div class="form-checkbox">
-                            <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">
-                                I understand this is peer guidance only, not professional consulting.
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            Send Message
-                        </button>
-                    </form>
-                    </div>
-                </div>
-                
-                <div class="footer-disclaimer" style="margin-top: var(--space-xl);">
-                    <p><strong>Before contacting me:</strong> Please review the FAQ section for common questions. I'm a current student providing peer guidance, not a professional consultant. I don't write essays for students or guarantee admissions outcomes.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-        <!-- Footer -->
-    <footer class="footer">
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
         <div class="container">
-            <div class="footer-content">
-                <!-- <div class="footer-disclaimer">
-                    <p><strong>Disclaimer:</strong> I'm not a professional college consultant. I don't guarantee outcomes. I don't write essays for students. This is peer-based guidance only.</p>
-                </div> -->
-                
-                <!-- Social Links with Font Awesome Icons -->
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/aldrich-magpali/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.instagram.com/ajsm1276/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <!-- <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter/X">
-                        <i class="fab fa-twitter"></i>
-                    </a> -->
-                    <a href="https://www.youtube.com/@AJSM1276" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <!-- <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a> -->
-                    <a href="https://www.tiktok.com/@ajsm3" target="_blank" rel="noopener noreferrer" class="social-link" title="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
+            <div class="section-header">
+                <h2>💬 student stories</h2>
+                <p>real voices from people I've had the privilege to work with</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <span class="testimonial-service">College Mentorship</span>
+                    <p class="testimonial-text">
+                        "Aldrich helped me find my authentic voice in my personal statement. His feedback was honest, detailed, and he genuinely cared about my story. I got into my dream school through QuestBridge!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <p>QuestBridge Match '25 · First-Gen Student</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="footer-info">
-                    <p>PolarPrep · QuestBridge-admitted student · Gates Scholarship Semi-Finalist</p>
-                    <p class="footer-note">This is a personal website representing one student's perspective.</p>
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <span class="testimonial-service">Music Production</span>
+                    <p class="testimonial-text">
+                        "Working with Aldrich on my first EP was a game-changer. He understood my vision and helped me achieve a sound I didn't think was possible. His ear for detail is incredible!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Marcus T.</h4>
+                            <p>Independent Artist</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="footer-contact">
-                    <p>For inquiries: <a href="mailto:aldrichmagpali1276@gmail.com">aldrichmagpali1276@gmail.com</a></p>
-                    <p class="copyright">© <span id="current-year">2026</span> PolarPrep</p>
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <span class="testimonial-service">Watchmaking Workshop</span>
+                    <p class="testimonial-text">
+                        "I had no idea where to start with watch repair. Aldrich walked me through my first mod project step by step. Now I'm hooked and have restored three vintage watches!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>James L.</h4>
+                            <p>Horology Enthusiast</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <script>
-    // Simple JavaScript for interactivity
-    document.addEventListener('DOMContentLoaded', function() {
-        // Set current year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Mobile Menu Toggle
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="footer-text">aldrich · peer mentorship · creative studio · horology</p>
+            <p class="footer-small">peer-based guidance — authentic, hands-on, no fluff.</p>
+            <div class="footer-email">
+                <p class="footer-small">📬 reach out anytime: <a href="mailto:hello@aldrich.nexus">hello@aldrich.nexus</a></p>
+            </div>
+            <p class="footer-small" style="margin-top: 2rem;">© 2026 aldrich.nexus — all services are peer-based, no guarantees, just real support</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    (function() {
+        // EXACT ORIGINAL MENU TOGGLE FUNCTIONALITY
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('.nav');
-        const navLinks = document.querySelectorAll('.nav-link');
         
         if (menuToggle && nav) {
-            menuToggle.addEventListener('click', function() {
+            menuToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
                 this.classList.toggle('active');
                 nav.classList.toggle('active');
-                
-                // Toggle body scroll when menu is open
-                if (nav.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = '';
-                }
             });
             
-            // Close menu when clicking on a regular nav link (not dropdown parent)
+            const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    // Only close if it's not a dropdown parent on mobile
-                    if (window.innerWidth < 1000 && link.closest('.nav-item-has-children')) {
-                        return; // Don't close menu for dropdown parents on mobile
-                    }
-                    
+                link.addEventListener('click', () => {
                     menuToggle.classList.remove('active');
                     nav.classList.remove('active');
-                    document.body.style.overflow = '';
                 });
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!nav.contains(e.target) && !menuToggle.contains(e.target) && nav.classList.contains('active')) {
-                    menuToggle.classList.remove('active');
-                    nav.classList.remove('active');
-                    document.body.style.overflow = '';
-                    
-                    // Also close any open dropdowns on mobile
-                    if (window.innerWidth < 1000) {
-                        document.querySelectorAll('.nav-item-has-children.active').forEach(item => {
-                            item.classList.remove('active');
-                        });
-                    }
-                }
-            });
-            
-            // Close menu on escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && nav.classList.contains('active')) {
-                    menuToggle.classList.remove('active');
-                    nav.classList.remove('active');
-                    document.body.style.overflow = '';
-                    
-                    // Also close any open dropdowns on mobile
-                    if (window.innerWidth < 1000) {
-                        document.querySelectorAll('.nav-item-has-children.active').forEach(item => {
-                            item.classList.remove('active');
-                        });
-                    }
-                }
             });
         }
         
-        // ===== DROPDOWN FUNCTIONALITY =====
-        const navItemsWithChildren = document.querySelectorAll('.nav-item-has-children');
-        
-        navItemsWithChildren.forEach(item => {
-            const link = item.querySelector('.nav-link');
-            
-            link.addEventListener('click', function(e) {
-                // Only handle dropdown toggle on mobile
-                if (window.innerWidth < 1000) {
-                    e.preventDefault();
-                    
-                    // Close other dropdowns
-                    navItemsWithChildren.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('active')) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current dropdown
-                    item.classList.toggle('active');
-                }
+        // Hub cards navigation
+        const cards = document.querySelectorAll('.hub-card');
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                let serviceName = card.querySelector('h3')?.innerText || 'service';
+                alert(`✨ NAVIGATING TO: ${serviceName} page\n\nEach service lives on its own dedicated page — fully detailed services, pricing, and portfolio.`);
             });
         });
         
-        // Handle dropdown link clicks
-        const dropdownLinks = document.querySelectorAll('.dropdown-link');
-        dropdownLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // On mobile, close menu and dropdown after clicking
-                if (window.innerWidth < 1000) {
-                    // Close dropdown
-                    const parentItem = link.closest('.nav-item-has-children');
-                    if (parentItem) {
-                        parentItem.classList.remove('active');
-                    }
-                    
-                    // Close mobile menu
-                    if (menuToggle && nav) {
-                        menuToggle.classList.remove('active');
-                        nav.classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
-                }
-            });
-        });
-        
-        // Close dropdowns when clicking outside on mobile
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth < 1000) {
-                if (!e.target.closest('.nav-item-has-children')) {
-                    navItemsWithChildren.forEach(item => {
-                        item.classList.remove('active');
-                    });
-                }
-            }
-        });
-        
-        // ===== ACCORDION FUNCTIONALITY =====
-        // Accordion functionality for Essays
-        const accordionToggles = document.querySelectorAll('.accordion-toggle');
-        
-        accordionToggles.forEach(toggle => {
-            toggle.addEventListener('click', function() {
-                const accordionItem = this.closest('.accordion-item');
-                const isActive = accordionItem.classList.contains('active');
-                
-                // Close all other accordion items
-                document.querySelectorAll('.accordion-item.active').forEach(item => {
-                    if (item !== accordionItem) {
-                        item.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current item
-                if (isActive) {
-                    accordionItem.classList.remove('active');
-                } else {
-                    accordionItem.classList.add('active');
-                }
-            });
-        });
-        
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', function() {
-                const faqItem = this.closest('.faq-item');
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all other FAQ items
-                document.querySelectorAll('.faq-item.active').forEach(item => {
-                    if (item !== faqItem) {
-                        item.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current item
-                if (isActive) {
-                    faqItem.classList.remove('active');
-                } else {
-                    faqItem.classList.add('active');
-                }
-            });
-        });
-        
-        // ===== DOWNLOAD BUTTONS =====
-        // const downloadBtns = document.querySelectorAll('.download-btn');
-        
-        // downloadBtns.forEach(btn => {
-        //     btn.addEventListener('click', function() {
-        //         const resource = this.getAttribute('data-resource');
-        //         let resourceName = '';
-                
-        //         switch(resource) {
-        //             case 'essay-worksheet':
-        //                 resourceName = 'Essay Brainstorming Worksheet';
-        //                 break;
-        //             case 'planning-checklist':
-        //                 resourceName = 'High School Planning Checklist';
-        //                 break;
-        //             case 'application-timeline':
-        //                 resourceName = 'College Application Timeline';
-        //                 break;
-        //             default:
-        //                 resourceName = 'Resource';
-        //         }
-                
-        //         // Show download notification
-        //         alert(`${resourceName} downloaded! (This is a demo - in a real site, this would download a PDF)`);
-        //     });
-        // });
-        
-        // ===== CONTACT FORM =====
-        // Contact Form Submission - MODIFIED FOR FORMSPREE
-        const contactForm = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
-
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function(e) {
-                // Don't prevent default - let Formspree handle it
-                // e.preventDefault(); // REMOVE THIS LINE
-                
-                // Just show a loading message
-                formMessage.textContent = 'Sending your message...';
-                formMessage.className = 'form-message';
-                
-                // Optional: You can let Formspree handle everything
-                // The form will submit normally to Formspree
-                // Formspree will redirect based on your settings
-            });
-        }
-        
-        // ===== SMOOTH SCROLL =====
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                // Skip if it's just "#" or if it's a dropdown parent on mobile
-                if (href === '#' || 
-                    (window.innerWidth < 1000 && this.classList.contains('nav-link') && 
-                     this.closest('.nav-item-has-children'))) {
-                    return;
-                }
-                
-                e.preventDefault();
-                
-                const targetId = href;
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    // Close mobile menu if open
-                    if (window.innerWidth < 1000 && nav && nav.classList.contains('active')) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (window.innerWidth <= 767 && nav.classList.contains('active')) {
                         menuToggle.classList.remove('active');
                         nav.classList.remove('active');
-                        document.body.style.overflow = '';
-                        
-                        // Also close any open dropdowns
-                        document.querySelectorAll('.nav-item-has-children.active').forEach(item => {
-                            item.classList.remove('active');
-                        });
-                        
-                        // Scroll after menu closes
-                        setTimeout(() => {
-                            window.scrollTo({
-                                top: targetElement.offsetTop - 70,
-                                behavior: 'smooth'
-                            });
-                        }, 300);
-                    } else {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 70,
-                            behavior: 'smooth'
-                        });
                     }
                 }
             });
         });
-        
-        // ===== SCROLL ANIMATIONS =====
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    
-                    // Animate child elements with delay
-                    const cards = entry.target.querySelectorAll('.service-card, .resource-category, .free-resource-card, .faq-item, .contact-item');
-                    cards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.classList.add('visible');
-                        }, index * 100);
-                    });
-                }
-            });
-        }, observerOptions);
-        
-        // Observe sections
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-        
-        // ===== WINDOW RESIZE HANDLER =====
-        // Close dropdowns when resizing from mobile to desktop
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 1000) {
-                // Close all mobile dropdowns when switching to desktop
-                document.querySelectorAll('.nav-item-has-children.active').forEach(item => {
-                    item.classList.remove('active');
-                });
-            }
-        });
-    });
-    // Interactive Web Background
-class InteractiveWeb {
-    constructor() {
-        this.canvas = document.createElement('canvas');
-        this.ctx = this.canvas.getContext('2d');
-        this.particles = [];
-        this.mouse = { x: 0, y: 0 };
-        this.init();
-    }
-    
-    init() {
-        // Add canvas to hero section
-        const hero = document.querySelector('.hero');
-        this.canvas.style.position = 'absolute';
-        this.canvas.style.top = '0';
-        this.canvas.style.left = '0';
-        this.canvas.style.width = '100%';
-        this.canvas.style.height = '100%';
-        this.canvas.style.zIndex = '0';
-        this.canvas.style.pointerEvents = 'none';
-        hero.prepend(this.canvas);
-        
-        // Resize handler
-        this.resize();
-        window.addEventListener('resize', () => this.resize());
-        
-        // Mouse move listener
-        document.addEventListener('mousemove', (e) => {
-            const rect = this.canvas.getBoundingClientRect();
-            this.mouse.x = e.clientX - rect.left;
-            this.mouse.y = e.clientY - rect.top;
-        });
-        
-        // Create particles
-        this.createParticles();
-        
-        // Start animation
-        this.animate();
-    }
-    
-    resize() {
-        this.canvas.width = this.canvas.offsetWidth;
-        this.canvas.height = this.canvas.offsetHeight;
-        this.createParticles();
-    }
-    
-    createParticles() {
-        this.particles = [];
-        const particleCount = Math.floor((this.canvas.width * this.canvas.height) / 15000);
-        
-        for (let i = 0; i < particleCount; i++) {
-            this.particles.push({
-                x: Math.random() * this.canvas.width,
-                y: Math.random() * this.canvas.height,
-                radius: Math.random() * 1.5 + 0.5,
-                speedX: Math.random() * 0.5 - 0.25,
-                speedY: Math.random() * 0.5 - 0.25,
-                color: `rgba(90, 141, 166, ${Math.random() * 0.3 + 0.1})`
-            });
-        }
-    }
-    
-    animate() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        
-        // Update and draw particles
-        this.particles.forEach(particle => {
-            // Move particle
-            particle.x += particle.speedX;
-            particle.y += particle.speedY;
-            
-            // Bounce off edges
-            if (particle.x < 0 || particle.x > this.canvas.width) particle.speedX *= -1;
-            if (particle.y < 0 || particle.y > this.canvas.height) particle.speedY *= -1;
-            
-            // Draw particle
-            this.ctx.beginPath();
-            this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-            this.ctx.fillStyle = particle.color;
-            this.ctx.fill();
-            
-            // Connect particles within distance
-            this.particles.forEach(otherParticle => {
-                const dx = particle.x - otherParticle.x;
-                const dy = particle.y - otherParticle.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < 120) {
-                    this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(90, 141, 166, ${0.2 * (1 - distance/120)})`;
-                    this.ctx.lineWidth = 0.5;
-                    this.ctx.moveTo(particle.x, particle.y);
-                    this.ctx.lineTo(otherParticle.x, otherParticle.y);
-                    this.ctx.stroke();
-                }
-            });
-            
-            // Connect to mouse
-            const dx = particle.x - this.mouse.x;
-            const dy = particle.y - this.mouse.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < 150) {
-                this.ctx.beginPath();
-                this.ctx.strokeStyle = `rgba(90, 141, 166, ${0.3 * (1 - distance/150)})`;
-                this.ctx.lineWidth = 1;
-                this.ctx.moveTo(particle.x, particle.y);
-                this.ctx.lineTo(this.mouse.x, this.mouse.y);
-                this.ctx.stroke();
-            }
-        });
-        
-        requestAnimationFrame(() => this.animate());
-    }
-}
-
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    new InteractiveWeb();
-});
+    })();
 </script>
 </body>
 </html>
