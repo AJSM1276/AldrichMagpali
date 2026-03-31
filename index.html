@@ -324,21 +324,6 @@
             width: 100%;
         }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(8px);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            width: fit-content;
-        }
-
         .hero-title {
             font-size: clamp(2.2rem, 5vw, 3.8rem);
             font-weight: 800;
@@ -491,29 +476,45 @@
             color: var(--primary);
         }
 
+        /* Mobile-specific hero padding to prevent title from touching nav */
         @media (max-width: 768px) {
+            .hero {
+                padding-top: 2rem;
+            }
+            
             .hero-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
                 text-align: center;
             }
-            .hero-badge {
-                margin-left: auto;
-                margin-right: auto;
+            
+            .hero-left {
+                margin-top: 1rem;
             }
+            
             .hero-stats {
                 justify-content: center;
             }
+            
             .stat-item {
                 text-align: center;
             }
+            
+            .btn-group {
+                justify-content: center;
+            }
+            
             .personal-card {
                 max-width: 350px;
-                margin: 0 auto;
+                margin: 0 auto 2rem auto;
+            }
+            
+            .hero-right {
+                margin-bottom: 0;
             }
         }
 
-        /* Hub Section */
+        /* Hub Section - Cards are now anchor tags */
         .hub-section {
             padding: 5rem 0;
             background: var(--off-white);
@@ -541,6 +542,7 @@
             gap: 2rem;
         }
 
+        /* Anchor tag styling - preserves card appearance */
         .hub-card {
             background: var(--white);
             border-radius: 24px;
@@ -783,8 +785,8 @@
     <div class="container">
         <div class="header-content">
             <a href="#" class="logo">
-                <span class="logo-icon"><i class="fa-solid fa-compass"></i></span>
-                <span class="logo-text">aldrich.nexus</span>
+                <span class="logo-icon"><i class="fa-solid fa-address-card"></i></span>
+                <span class="logo-text">AldrichStudio</span>
             </a>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <span class="menu-toggle-line"></span>
@@ -813,24 +815,21 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-left">
-                    <div class="hero-badge">
-                        <i class="fa-regular fa-compass"></i> welcome to the hub
-                    </div>
                     <h1 class="hero-title">
-                        aldrich ·<br><span class="gradient-text">creative mentor</span>
+                        aldrich ·<br><span class="gradient-text">academic mentor</span>
                     </h1>
                     <p class="hero-subtitle">
-                        College guidance · Music production · Watchmaking · Student tools — a central space for mentorship and creative projects.
+                        college prep · student resources
                     </p>
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <div class="stat-number">100+</div>
+                            <div class="stat-number">1.8k+</div>
                             <div class="stat-label">students guided</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">6</div>
+                        <!-- <div class="stat-item">
+                            <div class="stat-number">2</div>
                             <div class="stat-label">service areas</div>
-                        </div>
+                        </div> -->
                         <div class="stat-item">
                             <div class="stat-number">24/7</div>
                             <div class="stat-label">peer support</div>
@@ -844,7 +843,7 @@
                 <div class="hero-right">
                     <div class="personal-card">
                         <div class="personal-avatar">
-                            <i class="fa-regular fa-user"></i>
+                            <img src="images/headshot.jpg" alt="Aldrich's Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
                         </div>
                         <h3>Aldrich Jad Sy Magpali</h3>
                         <div class="title">QuestBridge Scholar · Creative Mentor</div>
@@ -862,65 +861,56 @@
             </div>
         </div>
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <section>
-        <img src="https://cdn.discordapp.com/attachments/733413124887150704/1478525999250407434/SPOILER_03021-ezgif.com-video-to-gif-converter.gif?ex=69c467a3&is=69c31623&hm=bf011034c8c2cbf3dc7f22a05a43761ef4fe51d8dc14ab31f00b567adbb46b33&" alt="Illustration of mentorship and creativity" style="width: 100%; margin-top: -4rem; opacity: 0.8;">
-    </section>
 
-    <!-- Services Hub Section -->
+    <!-- Services Hub Section - Using Anchor Tags for Proper Navigation -->
     <section class="hub-section" id="hub">
         <div class="container">
             <div class="section-header">
-                <h2>⚡ service constellations ⚡</h2>
-                <p>each zone has its own dedicated page — dive deeper into what you need</p>
+                <h2>Services</h2>
+                <p>Click on a card to explore</p>
             </div>
             <div class="hub-grid">
-                <div class="hub-card" data-service="college">
+                <a href="college-prep/college-prep.html" class="hub-card">
                     <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3>college hub</h3>
-                    <p>QuestBridge mentoring, essay deep-dives, scholarship strategy & application roadmap. Built for first-gen, low-income strivers.</p>
+                    <h3>College Prep</h3>
+                    <p>College application guidance and support. Designed for first-gen, low-income strivers.</p>
                     <div class="tag-group"><span class="tag">essay reviews</span><span class="tag">full-ride</span><span class="tag">peer guidance</span></div>
-                </div>
-                <div class="hub-card" data-service="student">
+                </a>
+
+                <a href="student-corner.html" class="hub-card">
                     <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
-                    <h3>student corner</h3>
-                    <p>Free Notion templates, study planners, productivity tools & resource vault for high school & college life.</p>
+                    <h3>Student Corner</h3>
+                    <p>Productivity tools, resources, and routines that helped me succeed.</p>
                     <div class="tag-group"><span class="tag">free downloads</span><span class="tag">templates</span><span class="tag">workflow</span></div>
-                </div>
-                <div class="hub-card" data-service="music">
+                </a>
+
+                <!-- <a href="music-lab.html" class="hub-card">
                     <div class="card-icon"><i class="fa-solid fa-headphones"></i></div>
                     <h3>music lab</h3>
                     <p>Beat making, vocal mixing, production feedback, and sonic branding — from demo to polished.</p>
                     <div class="tag-group"><span class="tag">production</span><span class="tag">mixing</span><span class="tag">consultation</span></div>
-                </div>
-                <div class="hub-card" data-service="watch">
+                </a> -->
+
+                <!-- <a href="watchmaking.html" class="hub-card">
                     <div class="card-icon"><i class="fa-regular fa-clock"></i></div>
                     <h3>watchmaking workshop</h3>
                     <p>Repair, restoration, movement servicing, modding guides & horology deep dives for enthusiasts.</p>
                     <div class="tag-group"><span class="tag">repair</span><span class="tag">modding</span><span class="tag">restoration</span></div>
-                </div>
-                <div class="hub-card" data-service="creative">
+                </a> -->
+
+                <!-- <a href="creative-studio.html" class="hub-card">
                     <div class="card-icon"><i class="fa-regular fa-pen-to-square"></i></div>
                     <h3>creative studio</h3>
                     <p>Visual identity, portfolio reviews, storytelling & creative direction for artists & side projects.</p>
                     <div class="tag-group"><span class="tag">branding</span><span class="tag">design</span><span class="tag">strategy</span></div>
-                </div>
-                <div class="hub-card" data-service="tech">
+                </a> -->
+
+                <!-- <a href="tech-snippets.html" class="hub-card">
                     <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
                     <h3>tech snippets</h3>
                     <p>Automation scripts, no-code tools, web tweaks & dev help for students & makers.</p>
                     <div class="tag-group"><span class="tag">automation</span><span class="tag">web tools</span><span class="tag">no-code</span></div>
-                </div>
+                </a> -->
             </div>
         </div>
     </section>
@@ -929,7 +919,7 @@
     <section class="testimonials-section" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>💬 student stories</h2>
+                <h2>Testimonials</h2>
                 <p>real voices from people I've had the privilege to work with</p>
             </div>
             <div class="testimonials-grid">
@@ -991,17 +981,17 @@
     <div class="container">
         <div class="footer-content">
             <div class="social-links">
-                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com/in/aldrich-magpali/" class="social-link" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/ajsm1276/" class="social-link" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@AJSM1276" class="social-link" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@ajsm3" class="social-link" target="_blank" rel="noopener noreferrer" title="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
-            <p class="footer-text">aldrich · peer mentorship · creative studio · horology</p>
+            <p class="footer-text">Aldrich Magpali · Peer Mentorship</p>
             <p class="footer-small">peer-based guidance — authentic, hands-on, no fluff.</p>
             <div class="footer-email">
-                <p class="footer-small">📬 reach out anytime: <a href="mailto:hello@aldrich.nexus">hello@aldrich.nexus</a></p>
+                <p class="footer-small">📬 reach out anytime: <a href="mailto:aldrichmagpali1276@gmail.com">aldrichmagpali1276@gmail.com</a></p>
             </div>
-            <p class="footer-small" style="margin-top: 2rem;">© 2026 aldrich.nexus — all services are peer-based, no guarantees, just real support</p>
+            <p class="footer-small" style="margin-top: 2rem;">© 2026 AldrichStudio</p>
         </div>
     </div>
 </footer>
@@ -1027,16 +1017,6 @@
                 });
             });
         }
-        
-        // Hub cards navigation
-        const cards = document.querySelectorAll('.hub-card');
-        cards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                e.preventDefault();
-                let serviceName = card.querySelector('h3')?.innerText || 'service';
-                alert(`✨ NAVIGATING TO: ${serviceName} page\n\nEach service lives on its own dedicated page — fully detailed services, pricing, and portfolio.`);
-            });
-        });
         
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
