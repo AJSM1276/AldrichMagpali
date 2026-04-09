@@ -1475,6 +1475,26 @@
             background-color: var(--secondary);
         }
 
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-very-light) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary);
+            transition: all var(--transition);
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition);
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -2940,16 +2960,19 @@
                 
                 <div class="services-grid">
                     <div class="service-card">
+                        <div class="product-image">
+                            <img src="/images/personalstatement.png" alt="Line-by-Line Essay Review Icon" class="service-icon">
+                        </div>
                         <div class="service-header">
                             <h3>Line-by-Line Essay Review & Editing</h3>
                         </div>
                         <div class="service-body">
                             <p>Detailed feedback on your personal statement or supplemental essays with line-by-line comments and overall structural suggestions.</p>
                             <ul class="service-features">
-                                <li>Two rounds of feedback on one essay</li>
+                                <li>One round of feedback</li>
                                 <li>48-hour turnaround</li>
                                 <li>Follow-up email support</li>
-                                <li>1000 word limit</li>
+                                <li>900 word limit</li>
                             </ul>
                         </div>
                         <div class="service-footer">
