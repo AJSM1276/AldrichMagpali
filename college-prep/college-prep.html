@@ -761,7 +761,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: var(--space-md);
-            margin-bottom: var(--space-lg);
+            margin-bottom: var(--space-xs);
         }
 
         .btn {
@@ -785,7 +785,7 @@
 
         .btn-primary:hover {
             background-color: var(--primary-light);
-            transform: translateY(-2px);
+            /* transform: translateY(-2px); */
             box-shadow: 0 6px 20px rgba(90, 141, 166, 0.3);
             color: var(--white);
         }
@@ -799,7 +799,7 @@
         .btn-outline:hover {
             background-color: var(--primary);
             color: var(--white);
-            transform: translateY(-2px);
+            /* transform: translateY(-2px); */
         }
 
         .hero-note {
@@ -855,7 +855,7 @@
         .paper:hover {
             transform: rotate(-2deg) scale(1.05);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-            z-index: 10;
+            /* z-index: 10; */
         }
 
         /* Paper floating animation */
@@ -1084,7 +1084,7 @@
             position: relative;
             z-index: 2;
             flex-wrap: wrap;
-            margin-top: var(--space-xl);
+            margin-top: var(--space-md);
         }
 
         .stat {
@@ -1361,10 +1361,10 @@
         position: relative;
         }
 
-        .product-card:hover {
+        /* .product-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
+        } */
 
         .product-badge {
         position: absolute;
@@ -1532,10 +1532,10 @@
         .service-card:nth-child(2) { transition-delay: 0.2s; }
         .service-card:nth-child(3) { transition-delay: 0.3s; }
 
-        .service-card:hover {
+        /* .service-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-        }
+        } */
 
         .service-header {
             padding: var(--space-lg) var(--space-lg) var(--space-md);
@@ -1544,13 +1544,13 @@
             transition: background-color var(--transition);
         }
 
-        .service-card:hover .service-header {
+        /* .service-card:hover .service-header {
             background-color: var(--primary-light);
-        }
+        } */
 
-        .service-card:hover .service-header h3 {
+        /* .service-card:hover .service-header h3 {
             color: var(--white);
-        }
+        } */
 
         .service-header h3 {
             margin-bottom: 0;
@@ -1596,7 +1596,7 @@
             text-align: center;
             background-color: var(--primary);
             color: var(--white);
-            padding: var(--space-md);
+            padding: var(--space-sm) var(--space-md);
             border-radius: var(--radius);
             font-weight: 600;
             text-decoration: none;
@@ -1606,7 +1606,7 @@
         .service-btn:hover {
             background-color: var(--primary-light);
             color: var(--white);
-            transform: translateY(-2px);
+            /* transform: translateY(-2px); */
         }
 
         .services-note {
@@ -1639,7 +1639,7 @@
 }
 
 .current-price {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #1e293b;
     line-height: 1;
@@ -1727,7 +1727,7 @@
 
                 /* ===== Purchase Essays Section ===== */
         .purchase-essays {
-            background-color: var(--secondary);
+            background-color: var(--white);
             padding: var(--space-xl) 0;
         }
 
@@ -1749,10 +1749,10 @@
             transition: transform var(--transition), box-shadow var(--transition);
         }
 
-        .essay-sample:hover {
+        /* .essay-sample:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
-        }
+        } */
 
         .essay-sample-header {
             display: flex;
@@ -2045,9 +2045,9 @@
         .resource-category:nth-child(2) { transition-delay: 0.2s; }
         .resource-category:nth-child(3) { transition-delay: 0.3s; }
 
-        .resource-category:hover {
+        /* .resource-category:hover {
             transform: translateY(-5px);
-        }
+        } */
 
         .category-header {
             display: flex;
@@ -2233,7 +2233,7 @@
 
         .download-btn:hover {
             background-color: var(--primary-light);
-            transform: translateY(-2px);
+            /* transform: translateY(-2px); */
             color: var(--white);
         }
 
@@ -2456,9 +2456,9 @@
             transition: transform var(--transition);
         }
 
-        .contact-info:hover {
+        /* .contact-info:hover {
             transform: translateY(-5px);
-        }
+        } */
 
         .contact-info-header {
             display: flex;
@@ -2480,9 +2480,9 @@
             transition: transform var(--transition);
         }
 
-        .contact-info:hover .contact-icon {
+        /* .contact-info:hover .contact-icon {
             transform: rotate(15deg) scale(1.1);
-        }
+        } */
 
         .contact-details {
             display: flex;
@@ -2554,9 +2554,9 @@
             transition: transform var(--transition);
         }
 
-        .contact-form-container:hover {
+        /* .contact-form-container:hover {
             transform: translateY(-5px);
-        }
+        } */
 
         .contact-form {
             display: flex;
@@ -2735,15 +2735,16 @@
                     <ul class="nav-list">
                         <li><a href="#hero" class="nav-link">Home</a></li>
                         <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#purchase-essays" class="nav-link">Essays</a></li>
                         
                         <!-- Essays Dropdown -->
-                        <li class="nav-item-has-children">
+                        <!-- <li class="nav-item-has-children">
                             <a href="#essays" class="nav-link">Essays <span class="dropdown-icon">▾</span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#essays" class="dropdown-link">My Essays</a></li>
                                 <li><a href="#purchase-essays" class="dropdown-link">Purchase My Essays</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         
                         <!-- Resources Dropdown -->
                         <li class="nav-item-has-children">
@@ -2770,7 +2771,7 @@
                 <div class="hero-content">
                     <div class="hero-badge">
                         <span class="badge-icon">🎓</span>
-                        <span class="badge-text">QuestBridge-Admitted Student</span>
+                        <span class="badge-text">QuestBridge Scholar</span>
                     </div>
                     
                     <h1 class="hero-title">College Prep</h1>
@@ -2796,9 +2797,9 @@
                         <a href="#contact" class="btn btn-outline">Get in Touch</a>
                     </div>
                     
-                    <div class="hero-note">
+                    <!-- <div class="hero-note">
                         <p><strong>Important:</strong> I'm <em>not</em> a professional consultant. This is peer guidance from a QuestBridge Scholar.</p>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <div class="hero-visual">
@@ -2848,8 +2849,8 @@
                     <div class="stat-label">Admission Path</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">Peer-Based</div>
-                    <div class="stat-label">Guidance Only</div>
+                    <div class="stat-number">Williams College</div>
+                    <div class="stat-label">Harvard of the Little Ivies</div>
                 </div>
             </div>
         </div>
@@ -2907,7 +2908,7 @@
             <div class="product-badge">Free</div>
             <div class="product-icon">🏫</div>
             <h3>College List</h3>
-            <p>Comprehensive Google Sheet to help you stay organized during college search & applciation</p>
+            <p>Comprehensive Google Sheet template to help you stay organized during college search & applciation</p>
             <ul class="product-features">
                 <li>Location & population</li>
                 <li>Academic stats</li>
@@ -2967,7 +2968,7 @@
                             <h3>Line-by-Line Essay Review & Editing</h3>
                         </div> -->
                         <div class="service-body">
-                            <p>Detailed feedback on your personal statement or supplemental essays with line-by-line comments and overall structural suggestions.</p>
+                            <p>Detailed feedback on your personal statement with line-by-line comments and overall structural suggestions.</p>
                             <ul class="service-features">
                                 <li>One round of feedback</li>
                                 <li>48-hour turnaround</li>
@@ -2977,8 +2978,8 @@
                         </div>
                         <div class="service-footer">
                             <div class="pricing-block">
-                            <!-- <div class="original-price">$99</div> -->
-                            <div class="current-price">$24.99</div>
+                            <div class="original-price">$14.99</div>
+                            <div class="current-price">$9.99</div>
                             <div class="price-frequency">one-time fee</div>
                         </div>
                             <a href="/subpages/coming-soon.html" target="_blank" rel="noopener" class="service-btn">
@@ -3039,14 +3040,14 @@
                     </div>
                 </div>
                 
-                <div class="services-note">
+                <!-- <div class="services-note">
                     <p><strong>Remember:</strong> This is peer guidance, not professional consulting. I don't write essays for students or guarantee admissions outcomes.</p>
-                </div>
+                </div> -->
             </div>
         </section>
 
         <!-- Essays Section -->
-        <section id="essays" class="section essays">
+        <!-- <section id="essays" class="section essays">
             <div class="container">
                 <div class="section-header">
                     <h2>My Essays</h2>
@@ -3095,7 +3096,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
                 <!-- Purchase Essays Section -->
         <section id="purchase-essays" class="section purchase-essays">
@@ -3119,8 +3120,8 @@
                                 </div>
                             </div>
                             <div class="price">
-                                <span class="original-price">$44.99</span>
-                                $19.99
+                                <span class="original-price">$24.99</span>
+                                $14.99
                             </div>
                         </div>
                         
@@ -3170,7 +3171,7 @@
                                 </div>
                             </div>
                             <div class="price">
-                                <span class="original-price">$14.99</span>
+                                <!-- <span class="original-price">$14.99</span> -->
                                 $4.99
                             </div>
                         </div>
@@ -3219,7 +3220,7 @@
                                 </div>
                             </div>
                             <div class="price">
-                                <span class="original-price">$14.99</span>
+                                <!-- <span class="original-price">$14.99</span> -->
                                 $4.99
                             </div>
                         </div>
@@ -3257,7 +3258,7 @@
                 </div>
                 
                 <div class="purchase-note">
-                    <p><strong>Important:</strong> These essays are for <strong>educational purposes only</strong>. They're meant to inspire your own writing and show what successful essays look like. <strong>Never copy or plagiarize</strong>—admissions officers can detect this and it will result in rejection.</p>
+                    <p><strong>Important:</strong> These essays are meant to <strong>inspire</strong> your own writing and show what successful essays look like. <strong>Never copy or plagiarize</strong>—admissions officers will detect this and it will result in rejection.</p>
                 </div>
             </div>
             
@@ -3366,7 +3367,7 @@
                 
                 <div class="resources-note">
                     <div class="note-icon">💡</div>
-                    <p>These are resources I personally found valuable during my application journey. I'm not affiliated with any of these organizations—I just found them helpful.</p>
+                    <p>These are resources I personally found valuable during my application journey. I am not affiliated with any of these organizations—I just found them helpful.</p>
                 </div>
             </div>
         </section>
@@ -3569,7 +3570,7 @@
                             </label>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-family: 'Comfortaa', sans-serif;" >
                             Send Message
                         </button>
                     </form>
@@ -3614,8 +3615,8 @@
                 </div>
                 
                 <div class="footer-info">
-                    <p>College Prep · QuestBridge-admitted student · Gates Scholarship Semi-Finalist</p>
-                    <p class="footer-note">This is a personal website representing one student's perspective.</p>
+                    <p>College Prep · QuestBridge Scholar · Williams College Student</p>
+                    <!-- <p class="footer-note">This is a personal website representing one student's perspective.</p> -->
                 </div>
                 
                 <div class="footer-contact">
