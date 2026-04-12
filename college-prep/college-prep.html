@@ -55,6 +55,307 @@
             --transition: 0.3s ease;
             --transition-slow: 0.5s ease;
         }
+/* ===== FGLI Announcement Banner - Emoji Stays with First Line of Text ===== */
+.announcement-banner {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #333333 0%, #1e2f3f 100%);
+    color: var(--white);
+    font-family: 'Comfortaa', sans-serif;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    max-height: 500px;
+    opacity: 1;
+    z-index: 999;
+    box-shadow: var(--shadow-lg);
+    border-bottom: 2px solid #ffd966;
+}
+
+/* Hidden state */
+.announcement-banner.banner-hidden {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    visibility: hidden;
+    box-shadow: none;
+}
+
+/* Inner content wrapper */
+.banner-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Message group - emoji stays at top with first line of text */
+.banner-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 2;
+    min-width: 200px;
+}
+
+/* Emoji icon - stays at top, doesn't drop down */
+.banner-icon {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+/* Text container - allows wrapping */
+.banner-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--white);
+    white-space: normal;
+    flex: 1;
+}
+
+.banner-text strong {
+    font-weight: 700;
+    color: #ffd966;
+}
+
+.highlight-discount {
+    background: #ffb347;
+    color: #1e2f3f;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    margin: 0 2px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* CTA Button */
+.banner-cta {
+    background: #ffb347;
+    border: none;
+    padding: 6px 14px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #1e2f3f;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: var(--shadow);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Close (X) button */
+.banner-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all var(--transition);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.banner-close:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.1);
+}
+
+/* Slide down animation */
+@keyframes bannerSlideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.announcement-banner:not(.banner-hidden) {
+    animation: bannerSlideDown 0.4s ease-out;
+}
+
+/* ===== DESKTOP (1200px and up) - 1 LINE ===== */
+@media (min-width: 1200px) {
+    .banner-inner {
+        flex-wrap: nowrap;
+        padding: 8px 24px;
+    }
+    
+    .banner-message {
+        flex-wrap: nowrap;
+        flex: 1;
+        align-items: center;
+    }
+    
+    .banner-icon {
+        margin-top: 0;
+    }
+    
+    .banner-text {
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== MEDIUM DESKTOP / LAPTOP (900px to 1200px) ===== */
+@media (min-width: 900px) and (max-width: 1199px) {
+    .banner-inner {
+        flex-wrap: nowrap;
+        padding: 8px 20px;
+        gap: 12px;
+    }
+    
+    .banner-message {
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    
+    .banner-text {
+        white-space: normal;
+        font-size: 0.8rem;
+    }
+    
+    .banner-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+        margin-top: 2px;
+    }
+    
+    .banner-cta {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+    }
+}
+
+/* ===== TABLET (768px to 899px) ===== */
+@media (min-width: 768px) and (max-width: 899px) {
+    .banner-inner {
+        flex-wrap: wrap;
+        padding: 8px 16px;
+        gap: 8px;
+    }
+    
+    .banner-message {
+        flex: 1;
+        min-width: auto;
+        align-items: flex-start;
+    }
+    
+    .banner-text {
+        font-size: 0.75rem;
+        white-space: normal;
+    }
+    
+    .banner-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+        margin-top: 2px;
+    }
+    
+    .highlight-discount {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+    }
+    
+    .banner-cta {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+}
+
+/* ===== MOBILE (under 768px) - STACKED LAYOUT ===== */
+@media (max-width: 767px) {
+    .banner-inner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 16px;
+        gap: 10px;
+    }
+    
+    .banner-message {
+        padding-right: 28px;
+        align-items: center;
+    }
+    
+    .banner-icon {
+        margin-top: 0;
+    }
+    
+    .banner-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .banner-text {
+        font-size: 0.8rem;
+    }
+    
+    .banner-cta {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===== EXTRA SMALL (under 400px) ===== */
+@media (max-width: 400px) {
+    .banner-inner {
+        padding: 8px 12px;
+    }
+    
+    .banner-text {
+        font-size: 0.7rem;
+    }
+    
+    .highlight-discount {
+        font-size: 0.6rem;
+        padding: 1px 5px;
+    }
+    
+    .banner-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
+        margin-top: 1px;
+    }
+    
+    .banner-cta {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+}
 
         /* ===== Reset & Base Styles ===== */
         * {
@@ -2716,6 +3017,21 @@
     </style>
 </head>
 <body>
+         <div class="announcement-banner" id="fgliAnnouncementBanner">
+    <div class="banner-inner">
+        <div class="banner-message">
+            <div class="banner-icon">✨</div>
+            <div class="banner-text">
+                <strong>FGLI Students:</strong> Get <span class="highlight-discount">75% OFF all services</span> — essay reviews, college roadmap, holistic app support.  
+                <span style="font-size:0.85rem; opacity:0.9;">Limited slots, apply now.</span>
+            </div>
+        </div>
+        <button class="banner-cta" id="applyNowBannerBtn">
+            📋 Apply for Discount →
+        </button>
+        <button class="banner-close" id="closeBannerBtn" aria-label="Dismiss announcement">✕</button>
+    </div>
+</div>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -2735,6 +3051,7 @@
                     <ul class="nav-list">
                         <li><a href="#hero" class="nav-link">Home</a></li>
                         <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
                         <li><a href="#purchase-essays" class="nav-link">Essays</a></li>
                         
                         <!-- Essays Dropdown -->
@@ -2754,8 +3071,6 @@
                                 <li><a href="#resources" class="dropdown-link">External Resources</a></li>
                             </ul>
                         </li>
-                        
-                        <li><a href="#services" class="nav-link">Services</a></li>
                         <li><a href="#faq" class="nav-link">FAQ</a></li>
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
@@ -3126,7 +3441,7 @@
                         </div>
                         
                         <div class="essay-sample-content">
-                            <p>This personal statement explores how working at a young age shaped me as a person and gave me the values I hold to this day.</p>
+                            <p>This file includes <strong>BOTH</strong> my QuestBridge and Common App personal statements.</p>
                             
                             <div class="essay-excerpt">
                                 I used to be scared of chips. An eight-ounce bag could either ruin my week or be a miracle in disguise...
@@ -3163,7 +3478,7 @@
                     <div class="essay-sample">
                         <div class="essay-sample-header">
                             <div>
-                                <h3>QuestBridge Short Answer Questions</h3>
+                                <h3>QuestBridge Supplementals</h3>
                                 <div class="essay-tags">
                                     <span class="essay-tag">Supplemental</span>
                                     <span class="essay-tag">Non-Academic</span>
@@ -3177,13 +3492,13 @@
                         </div>
                         
                         <div class="essay-sample-content">
-                            <p>These short one-sentence questions are short but impactful. In under 35 characters, I give admissions officers a glimpse of my personality.</p>
+                            <p>Package includes my QuestBridge writing exervise supplemental, short-answer supplementals, activities, and activities writing.</p>
                             
                             <div class="essay-excerpt">
                                 When offering my brag sheet to my teacher, she declined, saying...
                             </div>
                             
-                            <p><strong>What you'll learn:</strong> How to approach these short questions with authenticity and illustrative details without breaking the character limit.</p>
+                            <p><strong>What you'll learn:</strong> How to approach these supplemental writing pieces with authenticity and illustrative details, and write the short-responses without breaking the character limit.</p>
                         </div>
                         
                         <div class="essay-sample-footer">
@@ -3208,7 +3523,7 @@
                     </div>
                     
                     <!-- Essay Sample 3 -->
-                    <div class="essay-sample">
+                    <!-- <div class="essay-sample">
                         <div class="essay-sample-header">
                             <div>
                                 <h3>Activities + Activities Writing</h3>
@@ -3220,7 +3535,7 @@
                                 </div>
                             </div>
                             <div class="price">
-                                <!-- <span class="original-price">$14.99</span> -->
+                                <span class="original-price">$14.99</span>
                                 $4.99
                             </div>
                         </div>
@@ -3255,7 +3570,7 @@
                                 </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
                 <div class="purchase-note">
                     <p><strong>Important:</strong> These essays are meant to <strong>inspire</strong> your own writing and show what successful essays look like. <strong>Never copy or plagiarize</strong>—admissions officers will detect this and it will result in rejection.</p>
@@ -3359,16 +3674,16 @@
                             </a>
                             <a href="https://www.reddit.com" target="_blank" rel="noopener" class="resource-link">
                                 <div class="resource-title">Reddit</div>
-                                <div class="resource-desc">Great for seeing what current students think about their school! (Avoid r/ApplyToCollege—it's very toxic).</div>
+                                <div class="resource-desc">Great for seeing what current students think about their school!</div>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="resources-note">
+                <!-- <div class="resources-note">
                     <div class="note-icon">💡</div>
                     <p>These are resources I personally found valuable during my application journey. I am not affiliated with any of these organizations—I just found them helpful.</p>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -3621,13 +3936,49 @@
                 
                 <div class="footer-contact">
                     <p>For inquiries: <a href="mailto:aldrichmagpali1276@gmail.com">aldrichmagpali1276@gmail.com</a></p>
-                    <p class="copyright">© <span id="current-year">2026</span> AldrichStudio</p>
+                    <p class="copyright">© <span id="current-year">2026</span> Aldrich Magpali</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
+    // ============================================
+// BANNER THAT SHOWS ON EVERY PAGE RELOAD
+// (No persistence - always reappears)
+// ============================================
+
+(function() {
+    const banner = document.getElementById('fgliAnnouncementBanner');
+    const closeBtn = document.getElementById('closeBannerBtn');
+    const applyBtn = document.getElementById('applyNowBannerBtn');
+    
+    // NO localStorage check - banner always starts visible on every reload
+    // Just ensure banner is visible when page loads
+    if (banner) {
+        banner.classList.remove('banner-hidden');
+    }
+    
+    // When user clicks X - just hide it for THIS session only
+    // Will reappear on next page reload
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (banner) {
+                banner.classList.add('banner-hidden');
+            }
+            // NO localStorage save - banner will show again on next reload
+        });
+    }
+    
+    // Optional: Apply button action
+    if (applyBtn) {
+        applyBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert("🎓 FGLI 75% discount application: \n\nPlease visit our FGLI Support section or contact me directly.\n\nDiscount code: FGLI75COMMUNITY");
+        });
+    }
+})();
     // Simple JavaScript for interactivity
     document.addEventListener('DOMContentLoaded', function() {
         // Set current year
