@@ -3171,24 +3171,19 @@
         .copyright {
             margin-top: var(--space-sm);
         }
-        /* ===== UNIFIED TRANSITIONS - SLOWER & SMOOTHER ===== */
-/* All theme-changing elements transition at the EXACT same speed */
-/* ===== CLEAN TRANSITIONS - NO !IMPORTANT ===== */
-/* Base transitions for theme switching */
-/* ===== SINGLE UNIFIED TRANSITION SYSTEM ===== */
-/* All theme-changing elements - same duration, same timing */
-/* ===== SINGLE UNIFIED TRANSITION SYSTEM ===== */
+/* ===== INSTANT THEME SWITCHING - NO DELAYS ===== */
+/* ===== INSTANT THEME SWITCHING - COMPLETE LIST ===== */
 body,
 .header,
 .hero,
 .section,
 .about,
-.services,        /* ✅ Already there */
-.resources,       /* ✅ Already there */
-.contact,         /* ✅ Already there */
-.faq,             /* ✅ Already there */
-.free-products,   /* ✅ Already there */
-.purchase-essays, /* Already there */
+.services,
+.resources,
+.contact,
+.faq,
+.free-products,
+.purchase-essays,
 .footer,
 .product-card,
 .service-card,
@@ -3196,204 +3191,142 @@ body,
 .faq-item,
 .contact-info,
 .contact-form-container,
-/* ADD THESE MISSING ONES: */
-.essays,          /* Add this */
-.essay-sample,    /* Add this */
-.purchase-note,   /* Add this */
-.services-grid,   /* Add this */
-.resources-grid,  /* Add this */
-.faq-list,        /* Add this */
-.contact-grid,    /* Add this */
-.hero-stats,      /* Add this */
-.stat,            /* Already there */
 .paper,
-.quote {
-    transition: background-color 0.5s ease,
-                color 0.5s ease,
-                border-color 0.5s ease,
-                box-shadow 0.5s ease;
-}
-
-/* Text elements */
+.quote,
+.stat,
+.disclaimer-box,
+.pricing-block,
+.essay-sample,
+.hero-badge,
+.btn-outline,
 h1, h2, h3, h4, p, span, li, a,
 .stat-number, .stat-label,
 .hero-title, .hero-subtitle,
 .section-subtitle,
 .product-card h3,
 .product-card > p,
-.product-features li {
-    transition: color 0.5s ease;
+.product-features li,
+
+/* ADD THESE MISSING SELECTORS */
+.hero-badge,
+.badge-icon,
+.badge-text,
+.feature-icon,
+.feature-text,
+.hero-visual,
+.graduation-cap,
+.quote-mark,
+.quote-content p,
+.quote-author,
+.paper-text,
+.pencil,
+.pencil-tip,
+.pencil-body,
+.faq-question,
+.faq-icon,
+.faq-answer,
+.faq-answer p,
+.accordion-toggle,
+.accordion-icon,
+.accordion-content,
+.stat-number,
+.stat-label,
+.social-link i,
+.logo-icon,
+.logo-text,
+.nav-link,
+.dropdown-icon,
+.dropdown-link,
+.btn,
+.btn-primary,
+.btn-outline,
+.service-header h3,
+.service-body p,
+.service-features li,
+.pricing-block,
+.original-price,
+.current-price,
+.price-frequency,
+.essay-tag,
+.essay-excerpt,
+.price,
+.download-btn,
+.service-btn,
+.category-icon,
+.resource-category h3,
+.resource-title,
+.resource-desc,
+.contact-icon,
+.contact-item-icon,
+.contact-item-title,
+.contact-item-desc,
+.form-label,
+.form-control,
+.form-checkbox label,
+.footer-info,
+.footer-contact,
+.copyright,
+.announcement-banner,
+.banner-text,
+.banner-icon,
+.banner-cta,
+.banner-close
+.social-links,
+.social-link,
+.social-link i,
+.footer,
+.footer-content,
+.footer-info,
+.footer-contact,
+.footer-disclaimer,
+.copyright {
+    transition: none;
 }
 
-/* Hamburger menu - keep its own animation */
+/* Hover effects */
+.btn:hover,
+.service-card:hover,
+.product-card:hover,
+.resource-category:hover,
+.social-link:hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Toggle thumb slide */
+.dark-mode-toggle .toggle-thumb {
+    transition: left 0.15s ease-out;
+}
+
+/* Scroll animations */
+.section {
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* ===== HAMBURGER MENU ANIMATION - FIXED ===== */
 .menu-toggle-line {
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
                 opacity 0.2s ease;
 }
 
-/* Toggle thumb */
-.dark-mode-toggle .toggle-thumb {
-    transition: left 0.3s ease-out, background-color 0.2s ease;
+.menu-toggle.active .menu-toggle-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
 }
 
-/* Hover effects - keep fast */
-.service-card:hover,
-.product-card:hover,
-.resource-category:hover,
-.btn:hover,
-.social-link:hover {
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+.menu-toggle.active .menu-toggle-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
 }
 
-/* ===== CROSS-DEVICE OPTIMIZED TRANSITIONS (NO !IMPORTANT) ===== */
-
-/* DESKTOP (1025px and above) - Full smooth transitions */
-@media (min-width: 1025px) {
-    body,
-    .header,
-    .hero,
-    .section,
-    .about,
-    .services,
-    .resources,
-    .contact,
-    .faq,
-    .free-products,
-    .purchase-essays,
-    .footer,
-    .product-card,
-    .service-card,
-    .resource-category,
-    .faq-item,
-    .contact-info,
-    .contact-form-container,
-    .paper,
-    .quote,
-    .stat,
-    .disclaimer-box,
-    .pricing-block,
-    .essay-sample,
-    .hero-badge,
-    .btn-outline {
-        transition: background-color var(--transition-speed) ease-out,
-                    border-color var(--transition-speed) ease-out,
-                    box-shadow var(--transition-speed) ease-out;
-    }
-    
-    h1, h2, h3, h4, p, span, li, a,
-    .stat-number, .stat-label,
-    .hero-title, .hero-subtitle,
-    .section-subtitle,
-    .product-card h3,
-    .product-card > p,
-    .product-features li,
-    .resource-title,
-    .resource-desc {
-        transition: color var(--transition-speed) ease-out;
-    }
+.menu-toggle.active .menu-toggle-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 
-/* TABLET (768px to 1024px) - Optimized for performance */
-@media (min-width: 768px) and (max-width: 1024px) {
-    body,
-    .header,
-    .hero,
-    .section,
-    .about,
-    .services,
-    .resources,
-    .contact,
-    .faq,
-    .free-products,
-    .purchase-essays,
-    .footer,
-    .product-card,
-    .service-card,
-    .resource-category {
-        transition: background-color 0.3s ease-out,
-                    border-color 0.3s ease-out;
-    }
-    
-    /* Text changes instantly on tablet for better performance */
-    h1, h2, h3, h4, p, span, li, a,
-    .stat-number, .stat-label,
-    .hero-title, .hero-subtitle,
-    .section-subtitle,
-    .product-card h3,
-    .product-card > p,
-    .product-features li {
-        transition: none;
-    }
-    
-    .dark-mode-toggle .toggle-thumb {
-        transition: left 0.2s ease-out;
-    }
+.menu-toggle {
+    transition: transform 0.2s ease;
 }
 
-/* PHONE (below 768px) - Maximum performance */
-@media (max-width: 767px) {
-    body,
-    .header,
-    .hero,
-    .section,
-    .product-card,
-    .service-card,
-    .free-products,
-    .services {
-        transition: background-color 0.25s ease-out;
-    }
-}
-
-/* Interactive elements - fast transitions on all devices */
-.btn,
-.btn-primary,
-.btn-outline,
-.service-btn,
-.download-btn,
-.purchase-btn,
-.menu-toggle,
-.menu-toggle-line,
-.social-link,
-.accordion-toggle,
-.faq-question,
-.banner-cta,
-.banner-close {
-    transition: all 0.2s ease;
-}
-
-/* Toggle thumb - smooth slide */
-.dark-mode-toggle .toggle-thumb {
-    transition: left 0.25s ease-out, background-color 0.2s ease;
-}
-
-/* Hover effects for cards */
-.service-card:hover,
-.product-card:hover,
-.resource-category:hover,
-.btn:hover,
-.social-link:hover {
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-}
-
-/* Scroll animations - separate from theme transitions */
-.section {
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.service-card,
-.resource-category {
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Remove any conflicting transitions - no !important needed */
-body,
-.header,
-.hero,
-.section,
-.product-card,
-.service-card,
-.resource-category {
-    /* Let the media queries above handle these */
+.menu-toggle:hover {
+    transform: scale(1.1);
 }
     </style>
 </head>
