@@ -26,8 +26,8 @@
             --off-white-very-light: #fcfcfc;
             --surface: #ffffff;
             --surface-soft: #eff6ff;
-            --hero-bg: linear-gradient(135deg, #eef6fb 0%, #f9fbfd 100%);
-            --section-alt-bg: linear-gradient(180deg, #f7fbff 0%, #eff6fb 100%);
+            --hero-bg: #eef6fb;
+            --section-alt-bg: #f7fbff;
             --border: #e0e0e0;
             --success: #4caf50;
             --error: #f44336;
@@ -75,8 +75,8 @@
             --off-white-very-light: #111827;
             --surface: #111827;
             --surface-soft: #172d3f;
-            --hero-bg: linear-gradient(135deg, #111827 0%, #0b1220 100%);
-            --section-alt-bg: linear-gradient(180deg, #111827 0%, #0b1220 100%);
+            --hero-bg: #0f172a;
+--section-alt-bg: #0b1220;
             --border: rgba(148, 163, 184, 0.22);
             --shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
             --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.35);
@@ -383,31 +383,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-*,
-*::before,
-*::after {
-    transition-property: background-color, background, color, border-color, box-shadow, fill, stroke;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-/* EXCEPT these - they keep their hover/fast animations */
-.btn,
-.btn-primary,
-.btn-outline,
-.service-btn,
-.download-btn,
-.purchase-btn,
-.menu-toggle,
-.menu-toggle-line,
-.social-link,
-.dark-mode-toggle .toggle-thumb,
-.accordion-toggle,
-.faq-question {
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-}
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
@@ -426,25 +402,6 @@
 
         body.dark-mode {
             background: #0b1220;
-        }
-
-        .theme-transition,
-        .header,
-        .hero,
-        .section,
-        .footer,
-        .product-card,
-        .free-resource-card,
-        .service-card,
-        .contact-form,
-        .form-control,
-        .btn,
-        .download-btn,
-        .resource-category,
-        .resource-link,
-        .free-resource-card h3,
-        .product-card h3 {
-            transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
         }
 
         .container {
@@ -1823,7 +1780,7 @@
         border-radius: 12px;
         padding: 2rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        border: 1px solid #e2e8f0;
+        border: 1px solid var(--border);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
         }
@@ -1955,7 +1912,7 @@
         .product-image {
             width: 100%;
             height: auto;  /* This lets it grow naturally */
-            background: linear-gradient(135deg, var(--primary-very-light) 0%, #eff6fb 100%);
+            background: var(--primary-very-light);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2116,7 +2073,7 @@
 
 .original-price {
     text-decoration: line-through;
-    color: #94a3b8;
+    color: var(--text-light);
     font-size: 0.875rem;
 }
 
@@ -2129,7 +2086,7 @@
 
 .price-frequency {
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-light);
     margin-top: 0.25rem;
 }
 
@@ -3214,17 +3171,22 @@
         }
         /* ===== UNIFIED TRANSITIONS - SLOWER & SMOOTHER ===== */
 /* All theme-changing elements transition at the EXACT same speed */
+/* ===== CLEAN TRANSITIONS - NO !IMPORTANT ===== */
+/* Base transitions for theme switching */
+/* ===== SINGLE UNIFIED TRANSITION SYSTEM ===== */
+/* All theme-changing elements - same duration, same timing */
+/* ===== SINGLE UNIFIED TRANSITION SYSTEM ===== */
 body,
 .header,
 .hero,
 .section,
 .about,
-.services,
-.resources,
-.contact,
-.faq,
-.free-products,
-.purchase-essays,
+.services,        /* ✅ Already there */
+.resources,       /* ✅ Already there */
+.contact,         /* ✅ Already there */
+.faq,             /* ✅ Already there */
+.free-products,   /* ✅ Already there */
+.purchase-essays, /* Already there */
 .footer,
 .product-card,
 .service-card,
@@ -3232,70 +3194,53 @@ body,
 .faq-item,
 .contact-info,
 .contact-form-container,
-.nav,
-.dropdown-menu,
-.disclaimer-box,
-.pricing-block,
-.essay-sample,
+/* ADD THESE MISSING ONES: */
+.essays,          /* Add this */
+.essay-sample,    /* Add this */
+.purchase-note,   /* Add this */
+.services-grid,   /* Add this */
+.resources-grid,  /* Add this */
+.faq-list,        /* Add this */
+.contact-grid,    /* Add this */
+.hero-stats,      /* Add this */
+.stat,            /* Already there */
 .paper,
-.quote,
-.stat,
-.profile-photo,
-.image-placeholder,
-.btn-outline,
-.hero-badge,
-.feature-icon {
-    transition: 
-        background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-        background 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-        color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+.quote {
+    transition: background-color 0.5s ease,
+                color 0.5s ease,
+                border-color 0.5s ease,
+                box-shadow 0.5s ease;
 }
 
-/* Text elements - same speed */
+/* Text elements */
 h1, h2, h3, h4, p, span, li, a,
 .stat-number, .stat-label,
 .hero-title, .hero-subtitle,
-.section-subtitle, .section-header h2,
-.product-card h3, .product-card > p,
-.product-features li,
-.resource-title, .resource-desc,
-.service-features li,
-.faq-question, .faq-answer p {
-    transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+.section-subtitle,
+.product-card h3,
+.product-card > p,
+.product-features li {
+    transition: color 0.5s ease;
 }
 
-/* Cards - keep hover faster, theme transition slower */
-.service-card, .product-card, .resource-category {
-    transition: 
-        transform 0.2s ease-out,
-        box-shadow 0.2s ease-out,
-        background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+/* Hamburger menu - keep its own animation */
+.menu-toggle-line {
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                opacity 0.2s ease;
 }
 
-/* Interactive elements - keep fast for responsiveness */
-.btn, .service-btn, .download-btn, .purchase-btn,
-.menu-toggle, .social-link, .dark-mode-toggle,
-.banner-cta, .banner-close,
-.accordion-toggle, .faq-question {
-    transition: 
-        all 0.2s ease-out !important;
+/* Toggle thumb */
+.dark-mode-toggle .toggle-thumb {
+    transition: left 0.3s ease-out, background-color 0.2s ease;
 }
 
-/* Fix gradients - replace with solid colors */
-.hero {
-    background: var(--hero-bg) !important;
-}
-
-.services, .resources, .faq, .free-products {
-    background: var(--section-alt-bg) !important;
-}
-
-/* Scroll animations - keep separate */
-.section {
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out !important;
+/* Hover effects - keep fast */
+.service-card:hover,
+.product-card:hover,
+.resource-category:hover,
+.btn:hover,
+.social-link:hover {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
     </style>
