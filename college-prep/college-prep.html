@@ -59,6 +59,8 @@
             /* Transitions */
             --transition: 0.7s ease-in-out;
             --transition-slow: 0.7s ease-in-out;
+            --transition-speed: 0.35s;
+            --transition-fast: 0.2s;
         }
 
         body.dark-mode {
@@ -571,7 +573,7 @@
     border-radius: 50%;
     background-color: #ffffff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    transition: left 0.2s ease-in-out !important;
+    transition: left 0.2s ease-in-out;
 }
 
         .dark-mode-toggle:hover {
@@ -592,7 +594,7 @@
         }
 
         .dark-mode-toggle.active .toggle-thumb {
-    left: calc(100% - 28px) !important; 
+    left: calc(100% - 28px); 
     background-color: #fbbf24;
 }
 
@@ -2330,12 +2332,12 @@
         /* Hide essay-stats on mobile */
         @media screen and (max-width: 1000px) {
         .essay-stats {
-            display: none !important;
+            display: none;
         }
         
         /* If you need to adjust layout after removing stats */
         .purchase-section {
-            grid-template-columns: 1fr !important;
+            grid-template-columns: 1fr;
         }
         }
 
@@ -3243,9 +3245,56 @@ h1, h2, h3, h4, p, span, li, a,
     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
-/* MOBILE-OPTIMIZED TRANSITIONS */
-@media (max-width: 767px) {
-    /* Only transition backgrounds, nothing else */
+/* ===== CROSS-DEVICE OPTIMIZED TRANSITIONS (NO !IMPORTANT) ===== */
+
+/* DESKTOP (1025px and above) - Full smooth transitions */
+@media (min-width: 1025px) {
+    body,
+    .header,
+    .hero,
+    .section,
+    .about,
+    .services,
+    .resources,
+    .contact,
+    .faq,
+    .free-products,
+    .purchase-essays,
+    .footer,
+    .product-card,
+    .service-card,
+    .resource-category,
+    .faq-item,
+    .contact-info,
+    .contact-form-container,
+    .paper,
+    .quote,
+    .stat,
+    .disclaimer-box,
+    .pricing-block,
+    .essay-sample,
+    .hero-badge,
+    .btn-outline {
+        transition: background-color var(--transition-speed) ease-out,
+                    border-color var(--transition-speed) ease-out,
+                    box-shadow var(--transition-speed) ease-out;
+    }
+    
+    h1, h2, h3, h4, p, span, li, a,
+    .stat-number, .stat-label,
+    .hero-title, .hero-subtitle,
+    .section-subtitle,
+    .product-card h3,
+    .product-card > p,
+    .product-features li,
+    .resource-title,
+    .resource-desc {
+        transition: color var(--transition-speed) ease-out;
+    }
+}
+
+/* TABLET (768px to 1024px) - Optimized for performance */
+@media (min-width: 768px) and (max-width: 1024px) {
     body,
     .header,
     .hero,
@@ -3261,18 +3310,90 @@ h1, h2, h3, h4, p, span, li, a,
     .product-card,
     .service-card,
     .resource-category {
-        transition: background-color 0.25s ease, border-color 0.25s ease;
+        transition: background-color 0.3s ease-out,
+                    border-color 0.3s ease-out;
     }
     
-    /* Everything else changes instantly for performance */
-    * {
-        transition: none !important;
+    /* Text changes instantly on tablet for better performance */
+    h1, h2, h3, h4, p, span, li, a,
+    .stat-number, .stat-label,
+    .hero-title, .hero-subtitle,
+    .section-subtitle,
+    .product-card h3,
+    .product-card > p,
+    .product-features li {
+        transition: none;
     }
     
-    /* Re-enable toggle thumb slide */
     .dark-mode-toggle .toggle-thumb {
-        transition: left 0.2s ease !important;
+        transition: left 0.2s ease-out;
     }
+}
+
+/* PHONE (below 768px) - Maximum performance */
+@media (max-width: 767px) {
+    body,
+    .header,
+    .hero,
+    .section,
+    .product-card,
+    .service-card,
+    .free-products,
+    .services {
+        transition: background-color 0.25s ease-out;
+    }
+}
+
+/* Interactive elements - fast transitions on all devices */
+.btn,
+.btn-primary,
+.btn-outline,
+.service-btn,
+.download-btn,
+.purchase-btn,
+.menu-toggle,
+.menu-toggle-line,
+.social-link,
+.accordion-toggle,
+.faq-question,
+.banner-cta,
+.banner-close {
+    transition: all 0.2s ease;
+}
+
+/* Toggle thumb - smooth slide */
+.dark-mode-toggle .toggle-thumb {
+    transition: left 0.25s ease-out, background-color 0.2s ease;
+}
+
+/* Hover effects for cards */
+.service-card:hover,
+.product-card:hover,
+.resource-category:hover,
+.btn:hover,
+.social-link:hover {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+/* Scroll animations - separate from theme transitions */
+.section {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.service-card,
+.resource-category {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Remove any conflicting transitions - no !important needed */
+body,
+.header,
+.hero,
+.section,
+.product-card,
+.service-card,
+.resource-category {
+    /* Let the media queries above handle these */
 }
     </style>
 </head>
