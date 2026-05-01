@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PS1X10VHP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1PS1X10VHP');
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -336,6 +345,41 @@
           padding: 0.5rem;
         }
       }
+
+      /* My Experience Section */
+      .my-experience {
+        margin: 2.5rem 0;
+        padding: 2rem;
+        background: var(--off-white);
+        border-radius: 20px;
+        border: 1px solid var(--border);
+      }
+
+      .my-experience h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        color: var(--heading);
+      }
+
+      .my-experience p {
+        margin-bottom: 1.25rem;
+        line-height: 1.8;
+        color: var(--text);
+      }
+
+      .my-experience p:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 768px) {
+        .my-experience {
+          padding: 1.25rem;
+        }
+
+        .my-experience h2 {
+          font-size: 1.3rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -444,7 +488,7 @@
             <h1>Liberal Arts College vs University: Which Is Right for You?</h1>
             <div class="blog-post-meta">
               <span><i class="far fa-calendar-alt"></i> May 1, 2026</span>
-              <span><i class="far fa-clock"></i> 10 min read</span>
+              <span><i class="far fa-clock"></i> 6-16 min read</span>
               <span><i class="fas fa-tag"></i> College Search</span>
               <span><i class="fas fa-graduation-cap"></i> LAC Guide</span>
             </div>
@@ -459,24 +503,12 @@
 
           <div class="blog-post-content">
             <p>
-              As a student at Williams College — consistently ranked the
-              <strong>#1 Liberal Arts College in the nation</strong> — I get
-              asked this question all the time: "Should I go to a liberal arts
-              college or a university?"
-            </p>
-
-            <p>
-              The truth is, there's no single right answer. It depends on
-              <strong>you</strong> — your learning style, career goals, and what
-              you want from your college experience.
-            </p>
-
-            <p>
-              I chose a liberal arts college, and it was the best decision I
-              ever made. But I've also met incredible students at universities
-              who couldn't imagine being anywhere else. Let me break down the
-              differences so you can decide what's right for
-              <strong>you</strong>.
+              I'm going to be honest, when I first matched to Williams College
+              through QuestBridge, I had no idea what an LAC was. I also didn't
+              know anything about Williams in general—neither did my parents. If
+              you watch my QuestBridge reaction video, you'll see that my
+              parents had no clue where or what Williams was, and, not gonna
+              lie, I didn't either.
             </p>
 
             <h2>What Is a Liberal Arts College (LAC)?</h2>
@@ -485,13 +517,21 @@
               institution that emphasizes a
               <strong>broad education</strong> across multiple disciplines.
               Instead of specializing immediately, you take classes in
-              humanities, social sciences, natural sciences, and arts — even if
-              you plan to major in one area.
+              humanities, social sciences, natural sciences, and arts—even if
+              you plan to major in one area. Think of it like the traditional
+              high school experience where you're required to take an art
+              course, a history class, a science lab, etc.
             </p>
 
             <p>
               <strong>Examples:</strong> Williams College, Amherst College,
               Swarthmore College, Pomona College, Bowdoin College
+            </p>
+
+            <p>
+              The well known prestigious LACs are known as the
+              <strong>New England Small College Athletic Conference</strong>
+              (NESCAC).
             </p>
 
             <h2>What Is a University?</h2>
@@ -507,6 +547,11 @@
               University of Michigan, NYU
             </p>
 
+            <p>
+              The group of well known prestigious universities are known as the
+              <strong>Ivy League</strong>.
+            </p>
+
             <h2>Key Differences at a Glance</h2>
 
             <table class="comparison-table">
@@ -517,8 +562,13 @@
               </tr>
               <tr>
                 <td><strong>Size</strong></td>
-                <td>Small (1,500 - 3,000 students typically)</td>
+                <td>Small (typically 1,500 - 3,000 students)</td>
                 <td>Large (10,000 - 40,000+ students)</td>
+              </tr>
+              <tr>
+                <td><strong>Location</strong></td>
+                <td>Typically rural small-town areas</td>
+                <td>Typically suburban or urban areas</td>
               </tr>
               <tr>
                 <td><strong>Class Size</strong></td>
@@ -548,7 +598,7 @@
               <tr>
                 <td><strong>Campus Feel</strong></td>
                 <td>Tight-knit community</td>
-                <td>Can feel impersonal or overwhelming</td>
+                <td>Independent, varied social environment</td>
               </tr>
             </table>
 
@@ -587,9 +637,13 @@
                       some)
                     </li>
                     <li>Less "name recognition" outside academic circles</li>
-                    <li>Smaller alumni network</li>
                     <li>Fewer graduate programs on campus</li>
                     <li>Can feel "small" after 4 years</li>
+                    <li>Fewer research facilities</li>
+                    <li>
+                      Less "traditional" college experience (sports, parties,
+                      etc.)
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -606,7 +660,6 @@
                   <ul style="margin: 0.5rem 0 0 1.25rem">
                     <li>Wide range of majors and programs</li>
                     <li>More research opportunities (especially in STEM)</li>
-                    <li>Larger alumni network</li>
                     <li>More clubs, activities, and resources</li>
                     <li>"Big school" sports and school spirit</li>
                     <li>Often more prestigious name recognition</li>
@@ -623,41 +676,11 @@
                     <li>TAs often teach intro courses</li>
                     <li>Harder to build relationships with professors</li>
                     <li>More competitive environment</li>
-                    <li>Easier to "fall through the cracks"</li>
+                    <li>Weed out courses (especially in STEM fields)</li>
                   </ul>
                 </div>
               </div>
             </div>
-
-            <h2>My Personal Experience at Williams College (#1 LAC)</h2>
-            <p>
-              I chose Williams College through QuestBridge, and I couldn't be
-              happier. Here's what I've learned:
-            </p>
-
-            <blockquote>
-              <p>
-                "At Williams, I've never had a class larger than 25 students. My
-                professors know my name, my goals, and even my career
-                aspirations. One professor wrote me a recommendation that
-                literally changed my life."
-              </p>
-            </blockquote>
-
-            <p>
-              The small class sizes mean you <strong>can't hide</strong> — in a
-              good way. You participate, you think critically, and you form real
-              relationships with faculty. These professors become mentors who
-              help you land internships, research positions, and even jobs after
-              graduation.
-            </p>
-
-            <p>
-              That said, if you want to major in something highly specialized
-              like petroleum engineering or fashion merchandising, a university
-              might be a better fit. But for most students — especially those
-              still exploring their interests — LACs are incredible.
-            </p>
 
             <h2>Which One Should You Choose?</h2>
             <p>Ask yourself these questions:</p>
@@ -687,14 +710,25 @@
                   PhD)?</strong
                 >
                 Both work, but LACs have amazing grad school placement rates.
+                (Check out Williams' matriculation rates!). Having such a
+                tight-knit relationship with professors makes for great rec
+                letters!
               </li>
               <li>
                 <strong
                   >Do you want a "traditional" college experience with big
-                  sports?</strong
+                  sports and parties?</strong
                 >
-                Universities offer that. LACs have sports but not the same
-                stadium energy.
+                Universities offer that. While LACs have social scenes, they
+                tend to be more low-key.
+              </li>
+              <li>
+                <strong
+                  >Do you prefer a more relaxed, less competitive
+                  atmosphere?</strong
+                >
+                LACs typically offer a more laid-back environment where students
+                can focus on learning and personal growth.
               </li>
             </ul>
 
@@ -722,6 +756,12 @@
 
             <h2>The Bottom Line</h2>
             <p><strong>Neither is "better." They're just different.</strong></p>
+            <p>
+              <em
+                >There's a reason why they're ranked separately from each
+                other!</em
+              >
+            </p>
 
             <p>
               Liberal arts colleges are ideal if you want a
@@ -732,19 +772,11 @@
             </p>
 
             <p>
-              The best advice I can give?
-              <strong>Visit both types of schools if you can.</strong> Sit in on
+              Can't decide between the two?
+              <strong>Visit both types of schools.</strong> Sit in for some
               classes. Talk to current students. See where you feel most at
-              home.
+              home!
             </p>
-
-            <blockquote>
-              <p>
-                "I thought I wanted a big university until I visited Williams.
-                The moment I stepped on campus, I just knew. Trust your gut — it
-                usually knows before your brain does."
-              </p>
-            </blockquote>
 
             <p>
               Still unsure?
@@ -757,11 +789,162 @@
             </p>
           </div>
 
+          <hr>
+
+          <div class="my-experience">
+              <h2>Why I Chose Williams</h2>
+              <h3>QuestBridge Ranking</h3>
+              <p>
+                Believe it or not, Williams was at the very bottom of my ranking in my QuestBridge list.
+                However, I'm so glad that I ended up matching here instead of a different school. Mind you, I ranked my schools in this order:
+                <div style="text-align: center">
+                <ol style="display: inline-block; text-align: left; margin-bottom: 15px;">
+                  <li>Yale</li>
+                  <li>Harvard</li>
+                  <li>Brown</li>
+                  <li>Johns Hopkins</li>
+                  <li>Amherst</li>
+                  <li>Bowdoin</li>
+                  <li>Williams</li>
+                </ol>
+                </div>
+                You might be thinking, "why would he choose Williams over ivy leagues?"
+                Well, here's why:
+              </p>
+
+              <h3>Reasons Why I'd Turn Down HYPSM for Williams</h3>
+              <h4>Connections & Community</h4>
+              <p>I knew that the connections at Williams was strong, yet, I still underestimated how powerful they were. 
+                If I knew that I was basically guaranteed opportunities, Williams would've instantly been my top choice.
+              </p>
+              <h4>Financial Aid</h4>
+              <p>Yes, I know, I already have a full ride through QuestBridge. What could I possibly mean by Financial Aid?
+                Well, even with a full ride, Williams goes above and beyond.
+                If I received an unpaid internship, Williams would pay me.
+                If I wanted to do study abroad, Williams would pay me to attend.
+                If that alone doesn't speak to the level of support Williams provides, then I don't know what will.
+              </p>
+              <h4>Academics</h4>
+              <p>Williams is known for its rigorous academic environment—even being called more rigorous than Ivy League schools.
+                But despite this, the professors and students at Williams are all here to help you succeed.
+                Professors are here at Williams purely for the sole purpose of teaching <strong>YOU</strong>.
+                Not graduate students, not performing their own research, <strong>YOU</strong>.
+                The school is built for you to succeed. Just look at the matriculation rate of Williams premeds.
+              </p>
+            </div>
+
+          <div class="my-experience">
+              <h2>My Personal Experience at the Williams Preview</h2>
+
+              <h3>Community and Connections</h3>
+              <p>
+                The very first thing I noticed was the insane sense of
+                <strong>community and belonging</strong>. It was really funny
+                how everybody seemed to know each other. For example, I was
+                walking around with a current senior, and I kid you not, he
+                waved at everybody we passed by until we got to our destination.
+                It's not even like he was this popular guy that everybody knew
+                either—everybody just knows each other.
+              </p>
+
+              <p>
+                At some point, when trying to find my host's dorm, I got lost. I
+                was walking around with my friend, and we realized that we were
+                in the complete opposite wing of the building. When we passed by
+                some students sitting in the common area, I asked for
+                directions, and I showed them my phone with the room number.
+                They didn't recognize it, so they asked me who my host was, and
+                when I told them my host's name, they were able to instantly
+                point me in the right direction.
+              </p>
+
+              <p>
+                Later on, I learned even more about how much of an impact the
+                tight-knit community made on everybody at the school. I attended
+                this assembly where students were talking about their experience
+                at Williams. <em>I cannot make this up.</em>
+                This one student talked about how they were looking for
+                opportunities (volunteering, internships, etc.), and how the
+                career advisor reached out to Williams alumni.
+                <strong
+                  >She got a response & opportunity back from every single
+                  person.</strong
+                >
+                As someone who spent a lot of my time cold emailing professors
+                at universities to get research as a high school student, the
+                fact that <strong>EVERY</strong>
+                alumni responded is just mind-blowing to me.
+              </p>
+
+              <h3>Academics</h3>
+              <p>
+                One thing that I've heard repeatedly was that the work at
+                Williams is challenging and rigorous.
+                <strong
+                  >Many students talked about how the work is 100% harder than
+                  what some students get at ivy league institutions.</strong
+                >
+                They told my friends and I not to worry though. Once again, they
+                emphasized the support and resources Williams provides. They
+                explained that since the community—students and professors—are
+                so collaborative, students are able to succeed. One example of
+                this is when I was sitting in for the introductory psychology
+                class. The girl sitting in front of me was literally on her
+                phone texting her professor.
+              </p>
+
+              <p>
+                As for the classes themselves, they're really different from
+                each other. In the psych class—the largest class Williams has to
+                offer—there were about 100 or so students in a lecture hall, with the professor display a slideshow using a projector.
+                This is how I pictured a typical "large lecture" at a university, and is probably what you would expect.
+              </p>
+
+              <p>The next class I attended was a senior level biology course.
+                Instead of a large lecture, the biology class was more like a typical high school classroom.
+                The room itself was pretty small—smaller than some of my high school classrooms. 
+                What made this class really cool was that the professor had these special clickers for students to use.
+                Every once in a while, the professor would reach a slide in the presentation where there would be a question.
+                The students would then enter their answers using the clickers.
+                Then, the next slide would reveal everybody's responses, and the professor would go through all the responses.
+                This class was a great example of how interactive the professors are with their students, and also how well they teach.
+                Despite being a senior level course, I was able to understand the material and answer questions correctly.
+              </p>
+
+              <h3>Financial Aid</h3>
+              <p>Williams probably has the best financial aid in the country.
+                People I talked to mentioned how if you get an unpaid internship, Williams will actually pay you—at least for QuestBridge students.
+                Similarly, the senior I was talking to also shared how he was a part of the study abroad program and was paid 10k!
+              </p>
+
+              <p>This is something a friend of mine said—I can't attest to its accuracy.
+                He talked about how easy it was to get resources from Williams.
+                He told me about how one person he talked to wanted a PC and was able to get one from the school completely for free.
+                It seems like the school goes out of its way to support its students and provide them with resources to succeed.
+              </p>
+
+              <p>As a QuestBridge student, Williams also provided free health insurance, a first yard fund (money to spend for your first year on whatever you want), free therapy, summer storage, and much more.
+                I can't confirm that this is the same with all students who receive a full ride, but I do know that Williams has been very generous with its financial aid.
+                I must say, even if you don't receive a full ride, Williams is still worth paying for purely because of the strong community and connections.
+                With the strength of the alumni connections here, it's almost like you can get a job not even a day after graduating.
+              </p>
+
+              <h3>Campus</h3>
+              <p>Many people are worried about committing to Williams purely because of it's rural setting.
+                However, after visiting, I must say, it was really pleasant.
+                If you really think about it, when you're in college, how often are you going to be going out?
+                Most of the time, you'll be spending your time with friends at some local spot, dorm, library, etc.
+                Williams had all of the necessities you need for thriving academically and socially.
+                There's this one street on Williams (Spring street) with a bunch of restaurants and places to eat as well!
+                The campus itself was also extremely pretty. I couldn't help but feel at home there.
+                The view of the mountains was extraordinary and beautiful.
+              </p>
+            </div>
+
           <div class="blog-post-footer">
             <p style="color: var(--text-light); font-size: 0.9rem">
               <i class="fas fa-heart" style="color: var(--primary)"></i>
-              Found this helpful? Share it with a friend who's choosing between
-              colleges!
+              Found this helpful? Share it with a friend!
             </p>
             <div class="share-buttons">
               <button class="share-btn" onclick="copyToClipboard()">
