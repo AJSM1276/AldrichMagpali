@@ -698,7 +698,7 @@
         /* Desktop Dropdown Styles */
         /* Desktop Dropdown Styles - ONLY for 1000px and above */
 /* Desktop Dropdown Styles - ONLY for 1000px and above */
-@media (min-width: 1000px) {
+@media (min-width: 100px) {
     .dropdown-menu {
         position: absolute;
         top: 100%;
@@ -912,7 +912,7 @@
             }
         }
 
-        @media (min-width: 1000px) {
+        @media (min-width: 1100px) {
             .menu-toggle {
                 display: none;
             }
