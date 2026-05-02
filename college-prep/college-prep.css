@@ -3317,3 +3317,22 @@ h1, h2, h3, h4, p, span, li, a,
 .menu-toggle:hover {
     transform: scale(1.1);
 }
+
+.payhip-button {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.payhip-button:hover { 
+    transform: scale(1.02);
+}
+
+.payhip-button span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.payhip-button:hover span {
+    transform: translateX(8px);
+}
